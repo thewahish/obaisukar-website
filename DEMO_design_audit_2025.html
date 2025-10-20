@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESIGN AUDIT: 2025 Portfolio Trends</title>
+    <style>
+        :root {
+            --deep-indigo: #292663;
+            --warm-gold: #FBB04C;
+            --sky-blue: #00AEEF;
+            --vivid-magenta: #EC008C;
+            --purple-plum: #92278F;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: var(--light-gray);
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .audit-header {
+            text-align: center;
+            background: var(--deep-indigo);
+            color: white;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-radius: 15px;
+        }
+
+        .audit-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .audit-header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .panel {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--light-gray);
+        }
+
+        .panel-header.current {
+            border-bottom-color: #ff6b6b;
+        }
+
+        .panel-header.proposed {
+            border-bottom-color: #51cf66;
+        }
+
+        .badge {
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .badge.current {
+            background: #ffe0e0;
+            color: #c92a2a;
+        }
+
+        .badge.proposed {
+            background: #d3f9d8;
+            color: #2b8a3e;
+        }
+
+        .panel h2 {
+            color: var(--deep-indigo);
+            font-size: 1.5rem;
+            flex: 1;
+        }
+
+        .section-analysis {
+            margin-bottom: 2rem;
+        }
+
+        .section-name {
+            font-weight: 700;
+            color: var(--deep-indigo);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .layout-type {
+            background: var(--light-gray);
+            padding: 0.75rem;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .issue, .improvement {
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .issue::before {
+            content: "❌ ";
+            color: #c92a2a;
+        }
+
+        .improvement::before {
+            content: "✅ ";
+            color: #2b8a3e;
+        }
+
+        .trend-box {
+            background: linear-gradient(135deg, var(--sky-blue), var(--vivid-magenta));
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+        }
+
+        .trend-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .trends-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .trend-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .trend-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .trend-item p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .recommendations {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .recommendations h2 {
+            color: var(--deep-indigo);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .rec-item {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--warm-gold);
+        }
+
+        .rec-item h3 {
+            color: var(--deep-indigo);
+            margin-bottom: 0.75rem;
+        }
+
+        .rec-item .priority {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .priority.high {
+            background: #ffe0e0;
+            color: #c92a2a;
+        }
+
+        .priority.medium {
+            background: #fff4e0;
+            color: #f59f00;
+        }
+
+        .priority.low {
+            background: #e0f4ff;
+            color: #1971c2;
+        }
+
+        @media (max-width: 968px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trends-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="audit-header">
+        <h1>🎨 DESIGN AUDIT: Your Website vs. 2025 Trends</h1>
+        <p>Analysis of current structure + recommendations based on modern portfolio design</p>
+    </div>
+
+    <div class="container">
+        <!-- 2025 TRENDS -->
+        <div class="trend-box">
+            <h2>📊 2025 Portfolio Design Trends</h2>
+            <div class="trends-grid">
+                <div class="trend-item">
+                    <h3>🎨 Bento Box Layouts</h3>
+                    <p>Modular blocks with varying sizes - not everything the same!</p>
+                </div>
+                <div class="trend-item">
+                    <h3>📐 Asymmetric Grids</h3>
+                    <p>Breaking perfect grid rules to add personality while keeping structure</p>
+                </div>
+                <div class="trend-item">
+                    <h3>✨ Visual Hierarchy</h3>
+                    <p>Mix of layouts per section - horizontal timelines, lists, grids</p>
+                </div>
+                <div class="trend-item">
+                    <h3>📝 Text-Heavy Clarity</h3>
+                    <p>Clear communication over decoration - let content shine</p>
+                </div>
+                <div class="trend-item">
+                    <h3>🎯 Minimalist Purpose</h3>
+                    <p>Clean but expressive - every element serves a purpose</p>
+                </div>
+                <div class="trend-item">
+                    <h3>💫 Micro-interactions</h3>
+                    <p>Subtle animations on hover - engaging without overwhelming</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CURRENT VS PROPOSED -->
+        <div class="comparison-grid">
+            <!-- CURRENT STRUCTURE -->
+            <div class="panel">
+                <div class="panel-header current">
+                    <span class="badge current">CURRENT</span>
+                    <h2>Your Website Now</h2>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">1. Hero Section</div>
+                    <div class="layout-type">Full-width background image</div>
+                    <div class="improvement">Good! Impactful and professional</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">2. Stats Section</div>
+                    <div class="layout-type">4-column grid with numbers</div>
+                    <div class="improvement">Good! Clear and scannable</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">3. About Section (5 cards)</div>
+                    <div class="layout-type">Card grid layout</div>
+                    <div class="issue">Good content, standard grid</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">4. Timeline</div>
+                    <div class="layout-type">Vertical timeline</div>
+                    <div class="improvement">Good! Tells a story visually</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">5. Projects (8 cards)</div>
+                    <div class="layout-type">Card grid layout</div>
+                    <div class="issue">Same as About - too uniform</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">6. Skills (6 cards)</div>
+                    <div class="layout-type">Card grid layout</div>
+                    <div class="issue">Same layout again</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">7. Media Gallery</div>
+                    <div class="layout-type">Video embed grid (4 items)</div>
+                    <div class="improvement">Good! Different from cards</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">8. Awards (4 items)</div>
+                    <div class="layout-type">Card grid layout</div>
+                    <div class="issue">PROBLEM: Looks same as everything else!</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">9. Press (6 cards)</div>
+                    <div class="layout-type">Card grid layout</div>
+                    <div class="issue">Too many card grids!</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">10. Testimonials</div>
+                    <div class="layout-type">Carousel slider</div>
+                    <div class="improvement">Good! Different interaction</div>
+                </div>
+
+                <div class="section-analysis" style="background: #fff5f5; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                    <strong style="color: #c92a2a;">🚨 MAIN ISSUE:</strong>
+                    <p style="margin-top: 0.5rem; color: #666;">6 out of 10 sections use the SAME card grid layout. Everything feels too uniform and boxy!</p>
+                </div>
+            </div>
+
+            <!-- PROPOSED STRUCTURE -->
+            <div class="panel">
+                <div class="panel-header proposed">
+                    <span class="badge proposed">PROPOSED</span>
+                    <h2>2025 Modern Design</h2>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">1. Hero Section</div>
+                    <div class="layout-type">Full-width background image</div>
+                    <div class="improvement">KEEP - Working well!</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">2. Stats Section</div>
+                    <div class="layout-type">4-column grid with numbers</div>
+                    <div class="improvement">KEEP - Clear and effective</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">3. About Section (6 cards)</div>
+                    <div class="layout-type">Card grid layout (BUT with new Purpose card)</div>
+                    <div class="improvement">Add 6th card: Purpose-Driven Innovation</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">4. Timeline</div>
+                    <div class="layout-type">Vertical timeline + add 2000-2005 entry</div>
+                    <div class="improvement">Add Spacetoon Radio (age 17, Mr. Radio)</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">5. Projects</div>
+                    <div class="layout-type">Bento box layout (varying sizes)</div>
+                    <div class="improvement">⭐ REDESIGN: Make featured projects LARGER</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">6. Skills</div>
+                    <div class="layout-type">Keep card grid (works for 6 items)</div>
+                    <div class="improvement">KEEP - Good for technical info</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">7. Media Gallery</div>
+                    <div class="layout-type">Video embed grid</div>
+                    <div class="improvement">KEEP - Working well</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">8. Awards</div>
+                    <div class="layout-type">Horizontal timeline (4 items)</div>
+                    <div class="improvement">⭐ REDESIGN: More prestigious, less boxy</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">9. Press</div>
+                    <div class="layout-type">List layout with publication logos</div>
+                    <div class="improvement">⭐ REDESIGN: Horizontal logo strip + links</div>
+                </div>
+
+                <div class="section-analysis">
+                    <div class="section-name">10. Testimonials</div>
+                    <div class="layout-type">Carousel slider</div>
+                    <div class="improvement">KEEP - Interactive and engaging</div>
+                </div>
+
+                <div class="section-analysis" style="background: #f0fdf4; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                    <strong style="color: #2b8a3e;">✅ SOLUTION:</strong>
+                    <p style="margin-top: 0.5rem; color: #666;">Mix of layouts creates visual rhythm. Only 3 card grids instead of 6!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RECOMMENDATIONS -->
+        <div class="recommendations">
+            <h2>🎯 Priority Recommendations</h2>
+
+            <div class="rec-item">
+                <span class="priority high">HIGH PRIORITY</span>
+                <h3>1. Awards → Horizontal Timeline</h3>
+                <p><strong>Why:</strong> Awards are special achievements - they deserve a special design. Horizontal timeline is elegant, prestigious, and follows 2025 trends.</p>
+                <p><strong>Impact:</strong> Makes your 4 major awards stand out and feel more important.</p>
+            </div>
+
+            <div class="rec-item">
+                <span class="priority high">HIGH PRIORITY</span>
+                <h3>2. Add Spacetoon Radio Story (Age 17)</h3>
+                <p><strong>Content:</strong> New timeline entry for 2000-2005 showing you led Spacetoon Radio as "Mr. Radio" at age 17 (youngest employee).</p>
+                <p><strong>Impact:</strong> Shows you've been purpose-driven since day one - not just recent.</p>
+            </div>
+
+            <div class="rec-item">
+                <span class="priority high">HIGH PRIORITY</span>
+                <h3>3. Add Purpose-Driven Innovation Card</h3>
+                <p><strong>Content:</strong> 6th About card emphasizing social impact across all your work (Radio Al-Kul humanitarian, Karazah cultural preservation, etc.)</p>
+                <p><strong>Impact:</strong> Shows deeper meaning behind your work - you're not just technical, you're purpose-driven.</p>
+            </div>
+
+            <div class="rec-item">
+                <span class="priority medium">MEDIUM PRIORITY</span>
+                <h3>4. Press Section → Logo Strip Design</h3>
+                <p><strong>Why:</strong> Instead of 6 cards, use a horizontal strip with NPR, Al Jazeera, Washington Post, etc. logos linking to articles.</p>
+                <p><strong>Impact:</strong> More scannable, less repetitive, follows modern press coverage patterns.</p>
+            </div>
+
+            <div class="rec-item">
+                <span class="priority medium">MEDIUM PRIORITY</span>
+                <h3>5. Projects → Bento Box Layout</h3>
+                <p><strong>Why:</strong> Make featured projects (Academy Award, Karazah) LARGER. Others smaller. Not all same size.</p>
+                <p><strong>Impact:</strong> Visual hierarchy shows what's most important. More dynamic and interesting.</p>
+            </div>
+
+            <div class="rec-item">
+                <span class="priority low">LOW PRIORITY (FUTURE)</span>
+                <h3>6. Micro-interactions</h3>
+                <p><strong>Ideas:</strong> Subtle hover effects, smooth scroll animations, parallax on hero background.</p>
+                <p><strong>Impact:</strong> More engaging user experience - polish and refinement.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -26,7 +26,13 @@
       "Read(//Users/obaisukar/Downloads/**)",
       "Bash(start obai_sukar_website_white.html)",
       "WebFetch(domain:docs.google.com)",
-      "WebFetch(domain:www.youtube.com)"
+      "WebFetch(domain:www.youtube.com)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nMajor website update: New mobile-optimized design with enhanced features\n\nUpdates:\n- NEW: obai_sukar_website_white.html - Complete redesign with modern UI\n- NEW: portfolio.html - Dedicated portfolio page with 15 YouTube videos\n- NEW: Mobile navigation with fixed logo + hamburger menu\n- NEW: Professional Excellence section with 6 cards (consolidated childhood mentions)\n- NEW: All testimonial photos (.jpeg format): Shamel, Sinan, Kamel, Michael, Husam, Kerim\n\nFeatures Added:\n- Mobile-first responsive design with hamburger menu\n- Stats counter animation with multicolor effects on hover\n- Shimmer effects on all section titles\n- Press section with 28 media links (translated from Arabic)\n- LinkedIn recommendations link\n- Portfolio page with Music Production (8 videos) + Sound Design (7 videos)\n- Removed Twitter from social links\n- Centered hero buttons on mobile\n- Fixed mobile content visibility and navigation\n\nTechnical Improvements:\n- Clean mobile header (logo left, hamburger right)\n- Compact mobile menu overlay\n- Working scroll-to-section functionality\n- Hero buttons link correctly (Explore Projects → portfolio.html)\n- All press links have colorful hover effects\n- Stats reset to original values on hover out\n\n🤖 Generated with Claude Code\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git mv:*)",
+      "Bash(git commit:*)",
+      "Bash(start index.html)"
     ],
     "deny": [],
     "ask": []

@@ -1,0 +1,73 @@
+═══════════════════════════════════════════════════════════════
+   QUICK SETUP GUIDE - GitHub → cPanel Auto-Deployment
+═══════════════════════════════════════════════════════════════
+
+5-MINUTE SETUP CHECKLIST
+-------------------------
+
+□ STEP 1: SSH into your server
+  ssh your-username@obaisukar.com
+  cd ~/public_html
+
+□ STEP 2: Set up SSH key for GitHub (if not done)
+  ssh-keygen -t ed25519 -C "your-email@example.com"
+  cat ~/.ssh/id_ed25519.pub
+  → Add to GitHub: https://github.com/settings/keys
+
+□ STEP 3: Configure git on server
+  git init
+  git remote add origin git@github.com:thewahish/website.git
+  git fetch origin
+  git checkout main
+
+□ STEP 4: Generate secret token
+  openssl rand -hex 32
+  → Copy this output, you'll need it twice
+
+□ STEP 5: Upload & edit deploy.php
+  - Upload deploy.php to ~/public_html/
+  - Edit line 11: SECRET_TOKEN = 'paste-token-here'
+  - Edit line 12: REPO_DIR = '/home/your-username/public_html'
+
+□ STEP 6: Set permissions
+  chmod 755 ~/public_html/deploy.php
+
+□ STEP 7: Add GitHub webhook
+  https://github.com/thewahish/website/settings/hooks
+  - Payload URL: https://obaisukar.com/deploy.php
+  - Content type: application/json
+  - Secret: paste-token-here (same as Step 4)
+  - Events: Just the push event
+  - Active: ✓
+
+□ STEP 8: Test it!
+  # Local machine:
+  echo "<!-- Test -->" >> index.html
+  git add . && git commit -m "Test" && git push
+
+  # Server:
+  tail -f ~/public_html/deploy.log
+
+═══════════════════════════════════════════════════════════════
+YOUR NEW WORKFLOW
+═══════════════════════════════════════════════════════════════
+
+  1. Edit files locally
+  2. git add . && git commit -m "message"
+  3. git push origin main
+  4. ✨ Website auto-updates in seconds!
+
+═══════════════════════════════════════════════════════════════
+TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════
+
+View logs:
+  cat ~/public_html/deploy.log
+
+Test git pull manually:
+  cd ~/public_html && git pull origin main
+
+Check webhook delivery:
+  GitHub → Settings → Webhooks → Recent Deliveries
+
+═══════════════════════════════════════════════════════════════

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMO: Horizontal Awards Design</title>
+    <style>
+        :root {
+            --deep-indigo: #292663;
+            --warm-gold: #FBB04C;
+            --sky-blue: #00AEEF;
+            --vivid-magenta: #EC008C;
+            --purple-plum: #92278F;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: var(--light-gray);
+            padding: 4rem 2rem;
+        }
+
+        .demo-label {
+            text-align: center;
+            background: var(--deep-indigo);
+            color: white;
+            padding: 1rem;
+            margin-bottom: 3rem;
+            border-radius: 10px;
+        }
+
+        .demo-label h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .demo-label p {
+            opacity: 0.9;
+        }
+
+        /* HORIZONTAL TIMELINE AWARDS DESIGN */
+        .awards-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 4rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--deep-indigo);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--warm-gold);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+        }
+
+        /* HORIZONTAL TIMELINE LAYOUT */
+        .awards-timeline {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-top: 3rem;
+            padding: 2rem 0;
+        }
+
+        /* Connecting Line */
+        .awards-timeline::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--sky-blue), var(--vivid-magenta), var(--warm-gold), var(--purple-plum));
+            z-index: 0;
+        }
+
+        .award-item {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .award-dot {
+            width: 24px;
+            height: 24px;
+            background: var(--warm-gold);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 0 0 6px white, 0 0 20px rgba(251, 176, 76, 0.5);
+            position: relative;
+        }
+
+        .award-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+        }
+
+        .award-icon img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .award-year {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--warm-gold);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .award-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--deep-indigo);
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .award-description {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 968px) {
+            .awards-timeline {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            .awards-timeline::before {
+                top: 0;
+                left: 12px;
+                right: auto;
+                bottom: 0;
+                width: 3px;
+                height: auto;
+                background: linear-gradient(180deg, var(--sky-blue), var(--vivid-magenta), var(--warm-gold), var(--purple-plum));
+            }
+
+            .award-item {
+                text-align: left;
+                padding-left: 3rem;
+            }
+
+            .award-dot {
+                position: absolute;
+                left: 0;
+                top: 0;
+                margin: 0;
+            }
+
+            .award-icon {
+                justify-content: flex-start;
+            }
+        }
+
+        /* Comparison Note */
+        .comparison {
+            max-width: 1200px;
+            margin: 3rem auto;
+            background: #fffbf0;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--warm-gold);
+        }
+
+        .comparison h3 {
+            color: var(--deep-indigo);
+            margin-bottom: 1rem;
+        }
+
+        .comparison ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .comparison li {
+            padding: 0.5rem 0;
+            color: #666;
+        }
+
+        .comparison li::before {
+            content: "✓ ";
+            color: var(--warm-gold);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-label">
+        <h1>🎨 DEMO: Horizontal Awards Timeline Design</h1>
+        <p>2025 Modern Portfolio Trend - More elegant, less boxy</p>
+    </div>
+
+    <div class="awards-section">
+        <div class="section-header">
+            <h2 class="section-title">Recognition & Awards</h2>
+            <p class="section-subtitle">
+                International recognition for technical excellence, creative innovation, and humanitarian impact
+            </p>
+        </div>
+
+        <div class="awards-timeline">
+            <div class="award-item">
+                <div class="award-dot"></div>
+                <div class="award-icon">🏆</div>
+                <div class="award-year">2016</div>
+                <div class="award-title">Student Academy Award</div>
+                <div class="award-description">Silver Winner for "Cloud Kumo" - Hollywood recognition for technical excellence</div>
+            </div>
+
+            <div class="award-item">
+                <div class="award-dot"></div>
+                <div class="award-icon">🎬</div>
+                <div class="award-year">2017</div>
+                <div class="award-title">Gulf Film Festival</div>
+                <div class="award-description">First Prize for "Al-Waqi'iyah Al-Afdal" - Regional creative excellence</div>
+            </div>
+
+            <div class="award-item">
+                <div class="award-dot"></div>
+                <div class="award-icon">🏅</div>
+                <div class="award-year">2019</div>
+                <div class="award-title">Mohammed Bin Rashid Award</div>
+                <div class="award-description">Governor of Dubai Award for Arabic language and cultural innovation</div>
+            </div>
+
+            <div class="award-item">
+                <div class="award-dot"></div>
+                <div class="award-icon">⭐</div>
+                <div class="award-year">25+ Years</div>
+                <div class="award-title">Industry Leadership</div>
+                <div class="award-description">Lifetime achievement in media innovation and sound engineering mastery</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comparison">
+        <h3>✨ Why This Design is Better:</h3>
+        <ul>
+            <li><strong>More Prestigious:</strong> Horizontal timeline feels more elegant than boxes</li>
+            <li><strong>2025 Trend:</strong> Follows modern portfolio design patterns (bento/asymmetric layouts)</li>
+            <li><strong>Tells a Story:</strong> Timeline shows progression chronologically</li>
+            <li><strong>Stands Out:</strong> Different from other sections (not everything is boxes)</li>
+            <li><strong>Perfect for 4 Items:</strong> Horizontal works great for exactly 4 awards</li>
+            <li><strong>Mobile Responsive:</strong> Automatically switches to vertical on phones</li>
+            <li><strong>Visual Hierarchy:</strong> Connecting line guides the eye across achievements</li>
+        </ul>
+    </div>
+
+    <div class="comparison" style="background: #f0f8ff; border-left-color: var(--sky-blue);">
+        <h3>📊 Current vs. Proposed:</h3>
+        <ul>
+            <li><strong>Current:</strong> 4 large award cards in grid (same as all other sections)</li>
+            <li><strong>Proposed:</strong> Horizontal timeline with connected flow</li>
+            <li><strong>Impact:</strong> Awards feel more special and prestigious</li>
+            <li><strong>User Experience:</strong> Easier to scan left-to-right (natural reading flow)</li>
+        </ul>
+    </div>
+</body>
+</html>
