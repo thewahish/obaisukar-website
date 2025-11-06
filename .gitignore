@@ -1,0 +1,5 @@
+# Claude Code System Files
+.claude/
+.claude-project-init
+.claude-last-session
+*.claude-backup
