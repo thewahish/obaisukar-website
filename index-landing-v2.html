@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obai Sukar | Sound Engineer & Technology Leader</title>
+    <meta name="description" content="Choose your path: Sound & Media Production or IT & Infrastructure Leadership">
+
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Light.ttf') format('truetype');
+            font-weight: 300;
+        }
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Black.ttf') format('truetype');
+            font-weight: 900;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            overflow-x: hidden;
+            background: #292663;
+        }
+
+        .landing-container {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+        }
+
+        .branch-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        /* Photo placeholder */
+        .branch-photo {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            transition: all 0.5s ease;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #666;
+        }
+
+        .branch-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s ease;
+            padding: 2rem;
+        }
+
+        /* Creative Branch - Orange/Pink gradient */
+        .branch-card.creative .branch-overlay {
+            background: linear-gradient(135deg, rgba(236, 0, 140, 0.85), rgba(251, 176, 76, 0.85));
+        }
+
+        .branch-card.creative:hover .branch-overlay {
+            background: linear-gradient(135deg, rgba(236, 0, 140, 0.95), rgba(251, 176, 76, 0.95));
+        }
+
+        /* Tech Branch - Blue/Indigo gradient */
+        .branch-card.tech .branch-overlay {
+            background: linear-gradient(135deg, rgba(41, 38, 99, 0.85), rgba(0, 174, 239, 0.85));
+        }
+
+        .branch-card.tech:hover .branch-overlay {
+            background: linear-gradient(135deg, rgba(41, 38, 99, 0.95), rgba(0, 174, 239, 0.95));
+        }
+
+        .branch-card:hover .branch-photo {
+            transform: scale(1.1);
+        }
+
+        .branch-title {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1rem;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .branch-subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: white;
+            text-align: center;
+            max-width: 400px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .branch-highlights {
+            list-style: none;
+            text-align: center;
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .branch-highlights li {
+            margin: 0.5rem 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .branch-highlights li::before {
+            content: "✓ ";
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .enter-btn {
+            padding: 1rem 3rem;
+            background: white;
+            color: #292663;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .enter-btn:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Logo at top */
+        .logo-container {
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            text-align: center;
+        }
+
+        .main-logo {
+            height: 100px;
+            width: auto;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+            margin-bottom: 1rem;
+        }
+
+        .logo-title {
+            font-size: 2rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .logo-tagline {
+            font-size: 1rem;
+            font-weight: 300;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            opacity: 0.9;
+        }
+
+        /* Language Toggle */
+        .language-toggle {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid white;
+            color: white;
+            border-radius: 25px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .language-toggle:hover {
+            background: white;
+            color: #292663;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .landing-container {
+                grid-template-columns: 1fr;
+            }
+
+            .branch-card {
+                min-height: 50vh;
+            }
+
+            .branch-photo {
+                height: 50vh;
+            }
+
+            .branch-title {
+                font-size: 2rem;
+            }
+
+            .branch-subtitle {
+                font-size: 1rem;
+            }
+
+            .logo-container {
+                top: 1rem;
+            }
+
+            .main-logo {
+                height: 60px;
+            }
+
+            .logo-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="./Logo White/Logo_White.png" alt="Obai Sukar Logo" class="main-logo">
+        <div class="logo-title" data-en="OBAI SUKAR" data-ar="عبي سكر">OBAI SUKAR</div>
+        <div class="logo-tagline" data-en="Choose Your Path" data-ar="اختر مسارك">Choose Your Path</div>
+    </div>
+
+    <!-- Language Toggle -->
+    <button class="language-toggle" onclick="toggleLanguage()">
+        <span data-en="🌐 عربي" data-ar="🌐 English">🌐 عربي</span>
+    </button>
+
+    <!-- Landing Grid -->
+    <div class="landing-container">
+        <!-- Creative Branch - Orange/Pink -->
+        <a href="creative.html" class="branch-card creative">
+            <!-- Photo placeholder - replace with actual photo -->
+            <div class="branch-photo" style="background: linear-gradient(135deg, #EC008C, #FBB04C);">
+                [Your Photo: Creative Mode]
+            </div>
+            <div class="branch-overlay">
+                <h1 class="branch-title" data-en="SOUND & MEDIA" data-ar="الصوت والإعلام">SOUND & MEDIA</h1>
+                <p class="branch-subtitle" data-en="Sound design, broadcasting, and educational content creation" data-ar="تصميم الصوت، البث، وإنشاء المحتوى التعليمي">Sound design, broadcasting, and educational content creation</p>
+                <ul class="branch-highlights">
+                    <li data-en="Sound Design for Academy Award-Winning Film" data-ar="تصميم الصوت لفيلم فائز بجائزة الأكاديمية">Sound Design for Academy Award-Winning Film</li>
+                    <li data-en="739K+ YouTube Subscribers" data-ar="٧٣٩ ألف+ مشترك يوتيوب">739K+ YouTube Subscribers</li>
+                    <li data-en="310M+ Total Views" data-ar="٣١٠ مليون+ مشاهدة">310M+ Total Views</li>
+                    <li data-en="25+ Years in Media Production" data-ar="٢٥+ سنة في الإنتاج الإعلامي">25+ Years in Media Production</li>
+                </ul>
+                <span class="enter-btn" data-en="Explore Creative Work →" data-ar="استكشف الأعمال الإبداعية ←">Explore Creative Work →</span>
+            </div>
+        </a>
+
+        <!-- Tech Branch - Blue/Indigo -->
+        <a href="tech.html" class="branch-card tech">
+            <!-- Photo placeholder - replace with actual photo -->
+            <div class="branch-photo" style="background: linear-gradient(135deg, #292663, #00AEEF);">
+                [Your Photo: Tech Mode]
+            </div>
+            <div class="branch-overlay">
+                <h1 class="branch-title" data-en="IT & INFRASTRUCTURE" data-ar="تقنية المعلومات">IT & INFRASTRUCTURE</h1>
+                <p class="branch-subtitle" data-en="Enterprise systems, network architecture, and digital transformation" data-ar="أنظمة المؤسسات، بنية الشبكات، والتحول الرقمي">Enterprise systems, network architecture, and digital transformation</p>
+                <ul class="branch-highlights">
+                    <li data-en="Enterprise IT Director" data-ar="مدير تقنية المعلومات للمؤسسات">Enterprise IT Director</li>
+                    <li data-en="Healthcare & Education Systems" data-ar="أنظمة الرعاية الصحية والتعليم">Healthcare & Education Systems</li>
+                    <li data-en="Network Architecture & Security" data-ar="بنية الشبكات والأمن">Network Architecture & Security</li>
+                    <li data-en="25+ Years IT Leadership" data-ar="٢٥+ سنة قيادة تقنية">25+ Years IT Leadership</li>
+                </ul>
+                <span class="enter-btn" data-en="Explore Tech Leadership →" data-ar="استكشف القيادة التقنية ←">Explore Tech Leadership →</span>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            document.documentElement.lang = currentLang;
+            document.body.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            updateLanguage();
+        }
+
+        function updateLanguage() {
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${currentLang}`);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>Obai Sukar | Personal Journey - Life, Impact & Activism</title>
+    <meta name="description" content="Life journey of Obai Sukar - Media pioneer, technology leader, and human rights activist. Syrian-American professional with 25+ years transforming lives through media and technology.">
+    <meta name="keywords" content="Obai Sukar, biography, life story, Syrian-American, activism, humanitarian broadcasting, Radio Al-Kul, human rights">
+    <meta name="author" content="Obai Sukar">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Obai Sukar | Personal Journey">
+    <meta property="og:description" content="Life journey of a media pioneer, technology leader, and human rights activist">
+    <meta property="og:image" content="https://obaisukar.com/Logo%20White/Logo_White.png">
+    <meta property="og:url" content="https://obaisukar.com/personal.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Obai Sukar | Personal Journey">
+    <meta name="twitter:description" content="Life journey of a media pioneer, technology leader, and human rights activist">
+    <meta name="twitter:image" content="https://obaisukar.com/Logo%20White/Logo_White.png">
+
+    <style>
+        /* Font Face Declarations */
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Black.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        :root {
+            --deep-indigo: #292663;
+            --sky-blue: #00AEEF;
+            --hot-pink: #EC008C;
+            --orange: #FBB04C;
+            --purple: #92278F;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --text-dark: #292663;
+            --text-light: #666666;
+            --border-light: #E5E5E5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(41, 38, 99, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .home-btn {
+            background: var(--deep-indigo);
+            color: var(--white);
+            border: none;
+            border-radius: 25px;
+            padding: 0.5rem 1.5rem;
+            cursor: pointer;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .home-btn:hover {
+            background: var(--purple);
+            transform: translateY(-2px);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--deep-indigo);
+        }
+
+        .language-toggle {
+            background: none;
+            border: 2px solid var(--deep-indigo);
+            color: var(--deep-indigo);
+            border-radius: 25px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .language-toggle:hover {
+            background: var(--deep-indigo);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(146, 39, 143, 0.1), rgba(236, 0, 140, 0.1));
+            position: relative;
+            padding: 6rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-logo {
+            margin-bottom: 2rem;
+        }
+
+        .main-logo {
+            height: 120px;
+            width: auto;
+            filter: drop-shadow(0 4px 8px rgba(146, 39, 143, 0.3));
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--deep-indigo);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--purple);
+            margin-bottom: 3rem;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--deep-indigo);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Biography Section */
+        .bio-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        .bio-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .bio-highlight {
+            background: linear-gradient(135deg, rgba(146, 39, 143, 0.05), rgba(236, 0, 140, 0.05));
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--purple);
+            margin: 2rem 0;
+        }
+
+        /* Achievements Grid */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .achievement-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(41, 38, 99, 0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--purple);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(146, 39, 143, 0.2);
+        }
+
+        .achievement-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--deep-indigo);
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-subtitle {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--purple);
+            margin-bottom: 1rem;
+        }
+
+        .achievement-description {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Activism Section */
+        .activism-content {
+            background: linear-gradient(135deg, rgba(146, 39, 143, 0.05), rgba(236, 0, 140, 0.05));
+            border-radius: 20px;
+            padding: 3rem;
+            margin-top: 3rem;
+        }
+
+        .activism-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .activism-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(41, 38, 99, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .activism-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(146, 39, 143, 0.15);
+        }
+
+        .activism-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--deep-indigo);
+            margin-bottom: 1rem;
+        }
+
+        .activism-card p {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .press-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .press-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-light);
+            padding: 1rem 2rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(41, 38, 99, 0.05);
+        }
+
+        /* Contact Section */
+        .contact-form {
+            max-width: 800px;
+            margin: 3rem auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(41, 38, 99, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            font-weight: 500;
+            color: var(--deep-indigo);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            padding: 0.8rem;
+            border: 2px solid var(--border-light);
+            border-radius: 10px;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--purple);
+            box-shadow: 0 0 0 3px rgba(146, 39, 143, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-submit {
+            background: linear-gradient(135deg, var(--purple), var(--hot-pink));
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            padding: 1rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(146, 39, 143, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--deep-indigo);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--purple);
+            transform: translateY(-5px);
+        }
+
+        .social-link svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--white);
+        }
+
+        /* RTL Support */
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+
+        .rtl .nav-container {
+            flex-direction: row-reverse;
+        }
+
+        .rtl .nav-left {
+            flex-direction: row-reverse;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 4rem 1.5rem;
+            }
+
+            .nav-container {
+                padding: 1rem;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="landing.html" class="home-btn" data-en="← Home" data-ar="الرئيسية ←">← Home</a>
+                <div class="logo-text" data-en="OBAI SUKAR | Personal" data-ar="عبي سكر | شخصي">OBAI SUKAR | Personal</div>
+            </div>
+            <button class="language-toggle" onclick="toggleLanguage()">
+                <span data-en="🌐 عربي" data-ar="🌐 English">🌐 عربي</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-logo">
+                <img src="./Logo White/Logo_White.png" alt="Obai Sukar Logo" class="main-logo" style="filter: drop-shadow(0 4px 8px rgba(146, 39, 143, 0.3)); mix-blend-mode: darken;">
+            </div>
+            <h1 class="hero-title" data-en="THE REVOLUTIONARY" data-ar="الثوري">THE REVOLUTIONARY</h1>
+            <p class="hero-subtitle" data-en="Life, Impact & Purpose" data-ar="الحياة، التأثير، والهدف">Life, Impact & Purpose</p>
+            <p class="hero-tagline" data-en="Media Pioneer | Technology Leader | Human Rights Activist" data-ar="رائد إعلامي | قائد تقني | ناشط حقوق إنسان">Media Pioneer | Technology Leader | Human Rights Activist</p>
+        </div>
+    </section>
+
+    <!-- Biography Section -->
+    <section id="biography" class="section fade-in">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Life Story" data-ar="قصة الحياة">Life Story</h2>
+            <p class="section-subtitle" data-en="A journey of resilience, innovation, and impact across continents and industries" data-ar="رحلة من المرونة والابتكار والتأثير عبر القارات والصناعات">
+                A journey of resilience, innovation, and impact across continents and industries
+            </p>
+        </div>
+
+        <div class="bio-content">
+            <p data-en="Obai Sukar's life is defined by transformation—transforming media, technology, and lives. Born in Syria, his journey took him across continents, building bridges between cultures through sound, media, and technology." data-ar="تعرف حياة عبي سكر بالتحول—تحويل الإعلام والتكنولوجيا والحياة. ولد في سوريا، وأخذته رحلته عبر القارات، بناء جسور بين الثقافات من خلال الصوت والإعلام والتكنولوجيا.">
+                Obai Sukar's life is defined by transformation—transforming media, technology, and lives. Born in Syria, his journey took him across continents, building bridges between cultures through sound, media, and technology.
+            </p>
+
+            <p data-en="From the recording studios of Los Angeles to the broadcast facilities of the Middle East, from enterprise IT infrastructure in American healthcare to educational media reaching millions, his career spans two decades of relentless innovation and unwavering commitment to excellence." data-ar="من استوديوهات التسجيل في لوس أنجلوس إلى مرافق البث في الشرق الأوسط، من البنية التحتية لتقنية المعلومات في الرعاية الصحية الأمريكية إلى الإعلام التعليمي الذي يصل إلى الملايين، تمتد مسيرته المهنية عقدين من الابتكار المستمر والالتزام الثابت بالتميز.">
+                From the recording studios of Los Angeles to the broadcast facilities of the Middle East, from enterprise IT infrastructure in American healthcare to educational media reaching millions, his career spans two decades of relentless innovation and unwavering commitment to excellence.
+            </p>
+
+            <div class="bio-highlight">
+                <p data-en="&quot;My mission has always been to use technology and media not just as tools, but as forces for positive change—to educate, to empower, and to give voice to the voiceless.&quot;" data-ar="&quot;كانت مهمتي دائمًا استخدام التكنولوجيا والإعلام ليس فقط كأدوات، ولكن كقوى للتغيير الإيجابي—للتعليم، للتمكين، وإعطاء صوت لمن لا صوت لهم.&quot;">
+                    "My mission has always been to use technology and media not just as tools, but as forces for positive change—to educate, to empower, and to give voice to the voiceless."
+                </p>
+            </div>
+
+            <p data-en="As a graduate of the Los Angeles Recording School, Obai honed his craft in sound engineering, quickly earning recognition for his technical excellence and creative vision. His work on the animated film &quot;Cloud Kumo,&quot; which won the Student Academy Award Silver in 2016, showcased his ability to blend art and technology seamlessly." data-ar="كخريج من مدرسة لوس أنجلوس للتسجيل، صقل عبي حرفته في هندسة الصوت، وحصل بسرعة على التقدير لتفوقه التقني ورؤيته الإبداعية. أظهر عمله في الفيلم المتحرك &quot;كلاود كومو&quot; الذي فاز بجائزة الأكاديمية الطلابية الفضية في 2016، قدرته على الجمع بين الفن والتكنولوجيا بسلاسة.">
+                As a graduate of the Los Angeles Recording School, Obai honed his craft in sound engineering, quickly earning recognition for his technical excellence and creative vision. His work on the animated film "Cloud Kumo," which won the Student Academy Award Silver in 2016, showcased his ability to blend art and technology seamlessly.
+            </p>
+
+            <p data-en="Beyond professional achievements, Obai's true passion lies in impact. Whether building healthcare IT systems that save lives, creating educational content that reaches millions, or providing uncensored news to conflict zones through humanitarian broadcasting, every endeavor serves a higher purpose." data-ar="بعيدًا عن الإنجازات المهنية، تكمن شغف عبي الحقيقي في التأثير. سواء ببناء أنظمة تقنية المعلومات الصحية التي تنقذ الأرواح، أو إنشاء محتوى تعليمي يصل إلى الملايين، أو توفير أخبار غير خاضعة للرقابة إلى مناطق النزاع من خلال البث الإنساني، كل مسعى يخدم غرضًا أعلى.">
+                Beyond professional achievements, Obai's true passion lies in impact. Whether building healthcare IT systems that save lives, creating educational content that reaches millions, or providing uncensored news to conflict zones through humanitarian broadcasting, every endeavor serves a higher purpose.
+            </p>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section fade-in" style="background: var(--light-gray);">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Achievements & Recognition" data-ar="الإنجازات والتقدير">Achievements & Recognition</h2>
+            <p class="section-subtitle" data-en="Honors and milestones across media, technology, and humanitarian work" data-ar="تكريمات ومعالم عبر الإعلام والتكنولوجيا والعمل الإنساني">
+                Honors and milestones across media, technology, and humanitarian work
+            </p>
+        </div>
+
+        <div class="achievements-grid">
+            <!-- Achievement 1: Mohammed Bin Rashid Award -->
+            <div class="achievement-card">
+                <div class="achievement-icon">🏆</div>
+                <h3 class="achievement-title" data-en="Mohammed Bin Rashid Award" data-ar="جائزة محمد بن راشد">Mohammed Bin Rashid Award</h3>
+                <p class="achievement-subtitle" data-en="Arabic Language Award - 2019" data-ar="جائزة اللغة العربية - ٢٠١٩">Arabic Language Award - 2019</p>
+                <p class="achievement-description" data-en="Recognized for outstanding contribution to Arabic educational content through Karazah Channel, reaching hundreds of thousands of students worldwide." data-ar="تقديراً للمساهمة المتميزة في المحتوى التعليمي العربي من خلال قناة كرزة، التي تصل إلى مئات الآلاف من الطلاب في جميع أنحاء العالم.">
+                    Recognized for outstanding contribution to Arabic educational content through Karazah Channel, reaching hundreds of thousands of students worldwide.
+                </p>
+            </div>
+
+            <!-- Achievement 2: Academy Award Film -->
+            <div class="achievement-card">
+                <div class="achievement-icon">🎬</div>
+                <h3 class="achievement-title" data-en="Academy Award-Winning Film" data-ar="فيلم حائز على جائزة الأكاديمية">Academy Award-Winning Film</h3>
+                <p class="achievement-subtitle" data-en="Sound Design - Cloud Kumo, 2016" data-ar="تصميم الصوت - كلاود كومو، ٢٠١٦">Sound Design - Cloud Kumo, 2016</p>
+                <p class="achievement-description" data-en="Sound designer for Student Academy Award-winning animated film, demonstrating technical excellence in audio post-production." data-ar="مصمم صوت لفيلم رسوم متحركة فائز بجائزة الأكاديمية الطلابية، مما يدل على التميز التقني في ما بعد إنتاج الصوت.">
+                    Sound designer for Student Academy Award-winning animated film, demonstrating technical excellence in audio post-production.
+                </p>
+            </div>
+
+            <!-- Achievement 3: Digital Media Impact -->
+            <div class="achievement-card">
+                <div class="achievement-icon">📺</div>
+                <h3 class="achievement-title" data-en="Digital Media Impact" data-ar="تأثير الإعلام الرقمي">Digital Media Impact</h3>
+                <p class="achievement-subtitle" data-en="739K+ Subscribers, 310M+ Views" data-ar="٧٣٩ ألف+ مشترك، ٣١٠ مليون+ مشاهدة">739K+ Subscribers, 310M+ Views</p>
+                <p class="achievement-description" data-en="Co-founded Karazah Channel, transforming Arabic educational content and reaching millions of students across the Middle East and beyond." data-ar="شارك في تأسيس قناة كرزة، مما حول المحتوى التعليمي العربي ووصل إلى ملايين الطلاب في جميع أنحاء الشرق الأوسط وخارجها.">
+                    Co-founded Karazah Channel, transforming Arabic educational content and reaching millions of students across the Middle East and beyond.
+                </p>
+            </div>
+
+            <!-- Achievement 4: Technology Leadership -->
+            <div class="achievement-card">
+                <div class="achievement-icon">💻</div>
+                <h3 class="achievement-title" data-en="Enterprise IT Excellence" data-ar="التميز في تقنية المعلومات">Enterprise IT Excellence</h3>
+                <p class="achievement-subtitle" data-en="25+ Years Leadership" data-ar="٢٥+ سنة قيادة">25+ Years Leadership</p>
+                <p class="achievement-description" data-en="Led IT infrastructure for 18+ healthcare facilities with 99.8% uptime and zero security incidents, protecting sensitive patient data and ensuring continuity of care." data-ar="قاد البنية التحتية لتقنية المعلومات لأكثر من ١٨ منشأة رعاية صحية بنسبة تشغيل ٩٩.٨٪ وصفر حوادث أمنية، حماية بيانات المرضى الحساسة وضمان استمرارية الرعاية.">
+                    Led IT infrastructure for 18+ healthcare facilities with 99.8% uptime and zero security incidents, protecting sensitive patient data and ensuring continuity of care.
+                </p>
+            </div>
+
+            <!-- Achievement 5: Humanitarian Broadcasting -->
+            <div class="achievement-card">
+                <div class="achievement-icon">📻</div>
+                <h3 class="achievement-title" data-en="Humanitarian Broadcasting" data-ar="البث الإنساني">Humanitarian Broadcasting</h3>
+                <p class="achievement-subtitle" data-en="Radio Al-Kul - 500K Daily Listeners" data-ar="راديو الكل - ٥٠٠ ألف مستمع يومياً">Radio Al-Kul - 500K Daily Listeners</p>
+                <p class="achievement-description" data-en="Co-founded independent media station during Syrian civil war, providing uncensored news and humanitarian information to conflict zones. Featured in NPR, Al Jazeera, Washington Post, BBC Arabic." data-ar="شارك في تأسيس محطة إعلامية مستقلة خلال الحرب الأهلية السورية، توفر أخباراً غير خاضعة للرقابة ومعلومات إنسانية إلى مناطق النزاع. تم تمييزها في NPR وال جزيرة وواشنطن بوست وبي بي سي العربية.">
+                    Co-founded independent media station during Syrian civil war, providing uncensored news and humanitarian information to conflict zones. Featured in NPR, Al Jazeera, Washington Post, BBC Arabic.
+                </p>
+            </div>
+
+            <!-- Achievement 6: Industry Experience -->
+            <div class="achievement-card">
+                <div class="achievement-icon">🎯</div>
+                <h3 class="achievement-title" data-en="Cross-Industry Excellence" data-ar="التميز متعدد الصناعات">Cross-Industry Excellence</h3>
+                <p class="achievement-subtitle" data-en="25+ Years Professional Impact" data-ar="٢٥+ سنة تأثير مهني">25+ Years Professional Impact</p>
+                <p class="achievement-description" data-en="Led projects across media production, healthcare IT, educational technology, and broadcasting—serving international clients from Silicon Valley to the Middle East." data-ar="قاد مشاريع عبر الإنتاج الإعلامي، وتقنية المعلومات الصحية، والتكنولوجيا التعليمية، والبث—خدمة العملاء الدوليين من Silicon Valley إلى الشرق الأوسط.">
+                    Led projects across media production, healthcare IT, educational technology, and broadcasting—serving international clients from Silicon Valley to the Middle East.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activism & Impact Section -->
+    <section id="activism" class="section fade-in">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Activism & Impact" data-ar="النشاط والتأثير">Activism & Impact</h2>
+            <p class="section-subtitle" data-en="Using media and technology as forces for human rights, education, and social change" data-ar="استخدام الإعلام والتكنولوجيا كقوى لحقوق الإنسان والتعليم والتغيير الاجتماعي">
+                Using media and technology as forces for human rights, education, and social change
+            </p>
+        </div>
+
+        <div class="activism-content">
+            <div class="activism-grid">
+                <!-- Radio Al-Kul -->
+                <div class="activism-card">
+                    <h3 data-en="Radio Al-Kul" data-ar="راديو الكل">Radio Al-Kul</h3>
+                    <p data-en="Co-founded independent media station during Syrian civil war. Built broadcast studios from ground up, trained journalist teams, worked as on-the-ground war journalist. Revolutionary mobile FM transmission reaching conflict zones with uncensored news and humanitarian information." data-ar="شارك في تأسيس محطة إعلامية مستقلة خلال الحرب الأهلية السورية. بنى استوديوهات بث من الصفر، ودرب فرق الصحفيين، وعمل كصحفي حربي على الأرض. البث الإذاعي المحمول الثوري يصل إلى مناطق النزاع بأخبار غير خاضعة للرقابة ومعلومات إنسانية.">
+                        Co-founded independent media station during Syrian civil war. Built broadcast studios from ground up, trained journalist teams, worked as on-the-ground war journalist. Revolutionary mobile FM transmission reaching conflict zones with uncensored news and humanitarian information.
+                    </p>
+                </div>
+
+                <!-- Karazah Educational Mission -->
+                <div class="activism-card">
+                    <h3 data-en="Educational Access" data-ar="الوصول التعليمي">Educational Access</h3>
+                    <p data-en="Through Karazah Channel, provided free high-quality Arabic educational content to students who lack access to quality education. Democratized learning across socioeconomic boundaries, reaching rural and underserved communities throughout the Middle East." data-ar="من خلال قناة كرزة، وفر محتوى تعليمي عربي عالي الجودة مجاناً للطلاب الذين يفتقرون إلى الوصول إلى تعليم جيد. ديمقراطية التعلم عبر الحدود الاجتماعية والاقتصادية، والوصول إلى المجتمعات الريفية والمحرومة في جميع أنحاء الشرق الأوسط.">
+                        Through Karazah Channel, provided free high-quality Arabic educational content to students who lack access to quality education. Democratized learning across socioeconomic boundaries, reaching rural and underserved communities throughout the Middle East.
+                    </p>
+                </div>
+
+                <!-- Human Rights Advocacy -->
+                <div class="activism-card">
+                    <h3 data-en="Human Rights Advocacy" data-ar="الدفاع عن حقوق الإنسان">Human Rights Advocacy</h3>
+                    <p data-en="Active voice for Syrian revolution and human rights. Utilized media platforms to raise awareness about humanitarian crises, document atrocities, and advocate for civilian protection. Work featured in international press including NPR, Al Jazeera, Washington Post, BBC Arabic, and Gulf News." data-ar="صوت نشط للثورة السورية وحقوق الإنسان. استخدم منصات الإعلام لرفع الوعي حول الأزمات الإنسانية، وتوثيق الفظائع، والدفاع عن حماية المدنيين. تم عرض العمل في الصحافة الدولية بما في ذلك NPR وال جزيرة وواشنطن بوست وبي بي سي العربية وجلف نيوز.">
+                        Active voice for Syrian revolution and human rights. Utilized media platforms to raise awareness about humanitarian crises, document atrocities, and advocate for civilian protection. Work featured in international press including NPR, Al Jazeera, Washington Post, BBC Arabic, and Gulf News.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Press Coverage -->
+            <div class="section-header" style="margin-top: 4rem; margin-bottom: 2rem;">
+                <h3 class="section-title" style="font-size: 2rem;" data-en="Press Coverage" data-ar="التغطية الصحفية">Press Coverage</h3>
+            </div>
+            <div class="press-logos">
+                <div class="press-logo">NPR</div>
+                <div class="press-logo">Al Jazeera</div>
+                <div class="press-logo">Washington Post</div>
+                <div class="press-logo">BBC Arabic</div>
+                <div class="press-logo">Gulf News</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Get In Touch" data-ar="تواصل معي">Get In Touch</h2>
+            <p class="section-subtitle" data-en="Ready to collaborate, consult, or discuss a project?" data-ar="هل أنت مستعد للتعاون، الاستشارة، أو مناقشة مشروع؟">
+                Ready to collaborate, consult, or discuss a project?
+            </p>
+        </div>
+
+        <div class="contact-form">
+            <form action="https://formspree.io/f/myzdvjbj" method="POST" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name" class="form-label" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="service" class="form-label" data-en="Service Interest" data-ar="الخدمة المطلوبة">Service Interest</label>
+                        <select id="service" name="service" class="form-select" required>
+                            <option value="">Select a service...</option>
+                            <option value="consultation">General Consultation</option>
+                            <option value="media">Media & Production</option>
+                            <option value="it">IT & Technology</option>
+                            <option value="speaking">Speaking Engagement</option>
+                            <option value="collaboration">Collaboration Opportunity</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget" class="form-label" data-en="Project Budget" data-ar="ميزانية المشروع">Project Budget</label>
+                        <select id="budget" name="budget" class="form-select">
+                            <option value="">Select budget range...</option>
+                            <option value="under-5k">Under $5,000</option>
+                            <option value="5k-15k">$5,000 - $15,000</option>
+                            <option value="15k-50k">$15,000 - $50,000</option>
+                            <option value="50k-plus">$50,000+</option>
+                            <option value="discuss">Let's Discuss</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message" class="form-label" data-en="Message" data-ar="الرسالة">Message</label>
+                    <textarea id="message" name="message" class="form-textarea" placeholder="Tell me about your project, question, or how I can help..." required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.facebook.com/obai.sukar" class="social-link" target="_blank" title="Facebook">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/obaisukar" class="social-link" target="_blank" title="LinkedIn">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@KarazahOfficial" class="social-link" target="_blank" title="YouTube">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/obaisukar" class="social-link" target="_blank" title="Instagram">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                </a>
+                <a href="mailto:obai@obaisukar.com" class="social-link" title="Email">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+                </a>
+            </div>
+            <p data-en="&copy; 2025 Obai Sukar. All rights reserved. Syrian-American Professional." data-ar="&copy; ٢٠٢٥ عبي سكر. جميع الحقوق محفوظة. محترف سوري أمريكي.">&copy; 2025 Obai Sukar. All rights reserved. Syrian-American Professional.</p>
+            <p style="margin-top: 1rem; opacity: 0.8;" data-en="Media Pioneer | Technology Leader | Human Rights Activist" data-ar="رائد إعلامي | قائد تقني | ناشط حقوق إنسان">
+                Media Pioneer | Technology Leader | Human Rights Activist
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Fade-in on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+
+                if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', fadeInOnScroll);
+        window.addEventListener('load', fadeInOnScroll);
+
+        // Language toggle
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            document.documentElement.lang = currentLang;
+
+            if (currentLang === 'ar') {
+                document.body.classList.add('rtl');
+            } else {
+                document.body.classList.remove('rtl');
+            }
+
+            updateLanguage();
+        }
+
+        function updateLanguage() {
+            document.querySelectorAll('[data-en]').forEach(el => {
+                const translation = el.getAttribute(`data-${currentLang}`);
+                if (translation) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = translation;
+                    } else {
+                        el.innerHTML = translation;
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

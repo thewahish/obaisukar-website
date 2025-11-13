@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>Obai Sukar | Enterprise IT Leadership & Digital Transformation</title>
+    <meta name="description" content="Enterprise IT Director with 25+ years experience. Healthcare systems expert. 99.8% uptime. Cybersecurity & compliance. IT consulting services.">
+    <meta name="keywords" content="Obai Sukar, IT Director, enterprise IT, healthcare IT, cybersecurity, HIPAA compliance, IT consulting, network architecture, digital transformation">
+    <meta name="author" content="Obai Sukar">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Obai Sukar | Enterprise IT Leadership">
+    <meta property="og:description" content="Enterprise IT Director with 25+ years experience in healthcare systems and digital transformation">
+    <meta property="og:image" content="https://obaisukar.com/Logo%20White/Logo_White.png">
+    <meta property="og:url" content="https://obaisukar.com/tech.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Obai Sukar | Enterprise IT Leadership">
+    <meta name="twitter:description" content="Enterprise IT Director with 25+ years experience in healthcare systems and digital transformation">
+    <meta name="twitter:image" content="https://obaisukar.com/Logo%20White/Logo_White.png">
+
+    <style>
+        /* Font Face Declarations */
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Black.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        :root {
+            --deep-indigo: #292663;
+            --sky-blue: #00AEEF;
+            --hot-pink: #EC008C;
+            --orange: #FBB04C;
+            --purple: #92278F;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --text-dark: #292663;
+            --text-light: #666666;
+            --border-light: #E5E5E5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(41, 38, 99, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .home-btn {
+            background: var(--deep-indigo);
+            color: var(--white);
+            border: none;
+            border-radius: 25px;
+            padding: 0.5rem 1.5rem;
+            cursor: pointer;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .home-btn:hover {
+            background: var(--sky-blue);
+            transform: translateY(-2px);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--deep-indigo);
+        }
+
+        .language-toggle {
+            background: none;
+            border: 2px solid var(--deep-indigo);
+            color: var(--deep-indigo);
+            border-radius: 25px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .language-toggle:hover {
+            background: var(--deep-indigo);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(41, 38, 99, 0.1), rgba(0, 174, 239, 0.1));
+            position: relative;
+            padding: 6rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-logo {
+            margin-bottom: 2rem;
+        }
+
+        .main-logo {
+            height: 120px;
+            width: auto;
+            filter: drop-shadow(0 4px 8px rgba(41, 38, 99, 0.3));
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--deep-indigo);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--sky-blue);
+            margin-bottom: 3rem;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--deep-indigo);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(41, 38, 99, 0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--sky-blue);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 174, 239, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--deep-indigo);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-description {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .service-features li {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-features li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--sky-blue);
+            font-weight: bold;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(41, 38, 99, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 35px rgba(0, 174, 239, 0.2);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, var(--deep-indigo), var(--sky-blue));
+            color: var(--white);
+            padding: 2rem;
+        }
+
+        .project-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-subtitle {
+            font-size: 1rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .project-body {
+            padding: 2rem;
+        }
+
+        .project-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .project-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: var(--light-gray);
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--sky-blue);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 0.25rem;
+        }
+
+        /* Achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .achievement-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(41, 38, 99, 0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--deep-indigo);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(41, 38, 99, 0.2);
+        }
+
+        .achievement-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--deep-indigo);
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-subtitle {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--sky-blue);
+            margin-bottom: 1rem;
+        }
+
+        .achievement-description {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-form {
+            max-width: 800px;
+            margin: 3rem auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(41, 38, 99, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            font-weight: 500;
+            color: var(--deep-indigo);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            padding: 0.8rem;
+            border: 2px solid var(--border-light);
+            border-radius: 10px;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--sky-blue);
+            box-shadow: 0 0 0 3px rgba(0, 174, 239, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-submit {
+            background: linear-gradient(135deg, var(--deep-indigo), var(--sky-blue));
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            padding: 1rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 174, 239, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--deep-indigo);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--sky-blue);
+            transform: translateY(-5px);
+        }
+
+        .social-link svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--white);
+        }
+
+        /* RTL Support */
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+
+        .rtl .nav-container {
+            flex-direction: row-reverse;
+        }
+
+        .rtl .nav-left {
+            flex-direction: row-reverse;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 4rem 1.5rem;
+            }
+
+            .nav-container {
+                padding: 1rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="landing.html" class="home-btn" data-en="← Home" data-ar="الرئيسية ←">← Home</a>
+                <div class="logo-text" data-en="OBAI SUKAR | IT" data-ar="عبي سكر | تقنية المعلومات">OBAI SUKAR | IT</div>
+            </div>
+            <button class="language-toggle" onclick="toggleLanguage()">
+                <span data-en="🌐 عربي" data-ar="🌐 English">🌐 عربي</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-logo">
+                <img src="./Logo White/Logo_White.png" alt="Obai Sukar Logo" class="main-logo" style="filter: drop-shadow(0 4px 8px rgba(41, 38, 99, 0.3)); mix-blend-mode: darken;">
+            </div>
+            <h1 class="hero-title" data-en="IT & INFRASTRUCTURE" data-ar="تقنية المعلومات">IT & INFRASTRUCTURE</h1>
+            <p class="hero-subtitle" data-en="Enterprise Systems & Digital Transformation" data-ar="أنظمة المؤسسات والتحول الرقمي">Enterprise Systems & Digital Transformation</p>
+            <p class="hero-tagline" data-en="IT Director | Cybersecurity Expert | Infrastructure Consultant" data-ar="مدير تقنية المعلومات | خبير الأمن السيبراني | مستشار البنية التحتية">IT Director | Cybersecurity Expert | Infrastructure Consultant</p>
+        </div>
+    </section>
+
+    <!-- Professional Excellence Section -->
+    <section id="excellence" class="section fade-in">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Professional Excellence" data-ar="التميز المهني">Professional Excellence</h2>
+            <p class="section-subtitle" data-en="Over 25 years leading enterprise IT infrastructure and digital transformation initiatives" data-ar="أكثر من ٢٥ عاماً في قيادة البنية التحتية لتقنية المعلومات ومبادرات التحول الرقمي">
+                Over 25 years leading enterprise IT infrastructure and digital transformation initiatives
+            </p>
+        </div>
+
+        <div class="achievements-grid">
+            <!-- Enterprise IT Leadership -->
+            <div class="achievement-card">
+                <div class="achievement-icon">💼</div>
+                <h3 class="achievement-title" data-en="Enterprise IT Leadership" data-ar="قيادة تقنية المعلومات للمؤسسات">Enterprise IT Leadership</h3>
+                <p class="achievement-subtitle" data-en="25+ Years International Experience" data-ar="٢٥+ سنة خبرة دولية">25+ Years International Experience</p>
+                <p class="achievement-description" data-en="Directed IT operations for enterprise organizations across healthcare, education, and corporate sectors. Led teams, managed budgets, implemented strategic technology initiatives, and delivered measurable business outcomes." data-ar="أدار عمليات تقنية المعلومات للمؤسسات عبر قطاعات الرعاية الصحية والتعليم والشركات. قاد الفرق، وأدار الميزانيات، ونفذ مبادرات تكنولوجية استراتيجية، وحقق نتائج أعمال قابلة للقياس.">
+                    Directed IT operations for enterprise organizations across healthcare, education, and corporate sectors. Led teams, managed budgets, implemented strategic technology initiatives, and delivered measurable business outcomes.
+                </p>
+            </div>
+
+            <!-- Healthcare Systems Excellence -->
+            <div class="achievement-card">
+                <div class="achievement-icon">🏥</div>
+                <h3 class="achievement-title" data-en="Healthcare Systems Excellence" data-ar="التميز في أنظمة الرعاية الصحية">Healthcare Systems Excellence</h3>
+                <p class="achievement-subtitle" data-en="18+ Facilities | 99.8% Uptime" data-ar="١٨+ منشأة | ٩٩.٨٪ وقت التشغيل">18+ Facilities | 99.8% Uptime</p>
+                <p class="achievement-description" data-en="Led IT infrastructure for 18+ assisted-living and healthcare facilities (2020-2024). Achieved 99.8% uptime with zero security incidents. Managed HIPAA-compliant systems protecting sensitive patient data and ensuring continuity of care." data-ar="قاد البنية التحتية لتقنية المعلومات لأكثر من ١٨ منشأة مساعدة ورعاية صحية (٢٠٢٠-٢٠٢٤). حقق ٩٩.٨٪ وقت تشغيل مع صفر حوادث أمنية. أدار أنظمة متوافقة مع HIPAA تحمي بيانات المرضى الحساسة وتضمن استمرارية الرعاية.">
+                    Led IT infrastructure for 18+ assisted-living and healthcare facilities (2020-2024). Achieved 99.8% uptime with zero security incidents. Managed HIPAA-compliant systems protecting sensitive patient data and ensuring continuity of care.
+                </p>
+            </div>
+
+            <!-- Cybersecurity & Compliance -->
+            <div class="achievement-card">
+                <div class="achievement-icon">🔒</div>
+                <h3 class="achievement-title" data-en="Cybersecurity & Compliance" data-ar="الأمن السيبراني والامتثال">Cybersecurity & Compliance</h3>
+                <p class="achievement-subtitle" data-en="Zero Security Incidents" data-ar="صفر حوادث أمنية">Zero Security Incidents</p>
+                <p class="achievement-description" data-en="Implemented comprehensive cybersecurity frameworks and compliance protocols. HIPAA expertise in healthcare environments. Enterprise architecture design with security-first principles. Vulnerability management, incident response, and staff training programs." data-ar="نفذ أطر الأمن السيبراني الشاملة وبروتوكولات الامتثال. خبرة HIPAA في بيئات الرعاية الصحية. تصميم بنية المؤسسة مع مبادئ الأمان أولاً. إدارة الثغرات، والاستجابة للحوادث، وبرامج تدريب الموظفين.">
+                    Implemented comprehensive cybersecurity frameworks and compliance protocols. HIPAA expertise in healthcare environments. Enterprise architecture design with security-first principles. Vulnerability management, incident response, and staff training programs.
+                </p>
+            </div>
+
+            <!-- System Integration -->
+            <div class="achievement-card">
+                <div class="achievement-icon">⚙️</div>
+                <h3 class="achievement-title" data-en="System Integration & Modernization" data-ar="تكامل الأنظمة والتحديث">System Integration & Modernization</h3>
+                <p class="achievement-subtitle" data-en="Cloud & On-Premises Solutions" data-ar="حلول السحابة والبنية التحتية المحلية">Cloud & On-Premises Solutions</p>
+                <p class="achievement-description" data-en="Designed and implemented hybrid cloud infrastructure solutions. Network architecture and administration. Legacy system modernization. Database management. Integration of healthcare-specific platforms and compliance tools for seamless operations." data-ar="صمم ونفذ حلول البنية التحتية السحابية الهجينة. بنية الشبكة والإدارة. تحديث الأنظمة القديمة. إدارة قواعد البيانات. تكامل المنصات الخاصة بالرعاية الصحية وأدوات الامتثال للعمليات السلسة.">
+                    Designed and implemented hybrid cloud infrastructure solutions. Network architecture and administration. Legacy system modernization. Database management. Integration of healthcare-specific platforms and compliance tools for seamless operations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consulting Services Section -->
+    <section id="consulting" class="section fade-in" style="background: var(--light-gray);">
+        <div class="section-header">
+            <h2 class="section-title" data-en="IT Consulting Services" data-ar="خدمات الاستشارات التقنية">IT Consulting Services</h2>
+            <p class="section-subtitle" data-en="Comprehensive IT strategy and implementation consulting for your organization" data-ar="استشارات شاملة لاستراتيجية وتنفيذ تقنية المعلومات لمؤسستك">
+                Comprehensive IT strategy and implementation consulting for your organization
+            </p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Enterprise Architecture Consulting -->
+            <div class="service-card">
+                <div class="service-icon">🏛️</div>
+                <h3 class="service-title" data-en="Enterprise Architecture" data-ar="بنية المؤسسة">Enterprise Architecture</h3>
+                <p class="service-description" data-en="Strategic IT infrastructure planning and implementation aligned with business objectives." data-ar="التخطيط الاستراتيجي للبنية التحتية لتقنية المعلومات والتنفيذ المتوافق مع أهداف العمل.">
+                    Strategic IT infrastructure planning and implementation aligned with business objectives.
+                </p>
+                <ul class="service-features">
+                    <li data-en="Infrastructure assessment & roadmap" data-ar="تقييم البنية التحتية وخارطة الطريق">Infrastructure assessment & roadmap</li>
+                    <li data-en="Technology stack optimization" data-ar="تحسين مجموعة التكنولوجيا">Technology stack optimization</li>
+                    <li data-en="Scalability & future-proofing" data-ar="قابلية التوسع والإثبات المستقبلي">Scalability & future-proofing</li>
+                    <li data-en="Budget planning & ROI analysis" data-ar="تخطيط الميزانية وتحليل العائد على الاستثمار">Budget planning & ROI analysis</li>
+                </ul>
+            </div>
+
+            <!-- Healthcare IT Consulting -->
+            <div class="service-card">
+                <div class="service-icon">🏥</div>
+                <h3 class="service-title" data-en="Healthcare IT Systems" data-ar="أنظمة تقنية المعلومات الصحية">Healthcare IT Systems</h3>
+                <p class="service-description" data-en="Specialized consulting for healthcare organizations requiring HIPAA-compliant, reliable IT systems." data-ar="استشارات متخصصة لمؤسسات الرعاية الصحية التي تتطلب أنظمة تقنية معلومات موثوقة ومتوافقة مع HIPAA.">
+                    Specialized consulting for healthcare organizations requiring HIPAA-compliant, reliable IT systems.
+                </p>
+                <ul class="service-features">
+                    <li data-en="HIPAA compliance & security" data-ar="الامتثال والأمن لـ HIPAA">HIPAA compliance & security</li>
+                    <li data-en="Electronic Health Records (EHR)" data-ar="السجلات الصحية الإلكترونية">Electronic Health Records (EHR)</li>
+                    <li data-en="Patient data protection" data-ar="حماية بيانات المرضى">Patient data protection</li>
+                    <li data-en="Healthcare system integration" data-ar="تكامل نظام الرعاية الصحية">Healthcare system integration</li>
+                </ul>
+            </div>
+
+            <!-- Cybersecurity Assessment -->
+            <div class="service-card">
+                <div class="service-icon">🛡️</div>
+                <h3 class="service-title" data-en="Cybersecurity Assessment" data-ar="تقييم الأمن السيبراني">Cybersecurity Assessment</h3>
+                <p class="service-description" data-en="Comprehensive security audits and implementation of enterprise-grade protection measures." data-ar="عمليات تدقيق أمنية شاملة وتنفيذ تدابير حماية على مستوى المؤسسة.">
+                    Comprehensive security audits and implementation of enterprise-grade protection measures.
+                </p>
+                <ul class="service-features">
+                    <li data-en="Vulnerability assessment & penetration testing" data-ar="تقييم الثغرات واختبار الاختراق">Vulnerability assessment & penetration testing</li>
+                    <li data-en="Security policy development" data-ar="تطوير سياسة الأمن">Security policy development</li>
+                    <li data-en="Incident response planning" data-ar="تخطيط الاستجابة للحوادث">Incident response planning</li>
+                    <li data-en="Staff security training" data-ar="تدريب الموظفين على الأمن">Staff security training</li>
+                </ul>
+            </div>
+
+            <!-- Digital Transformation -->
+            <div class="service-card">
+                <div class="service-icon">🚀</div>
+                <h3 class="service-title" data-en="Digital Transformation" data-ar="التحول الرقمي">Digital Transformation</h3>
+                <p class="service-description" data-en="Guide your organization through digital modernization with strategic planning and execution." data-ar="قيادة مؤسستك من خلال التحديث الرقمي مع التخطيط الاستراتيجي والتنفيذ.">
+                    Guide your organization through digital modernization with strategic planning and execution.
+                </p>
+                <ul class="service-features">
+                    <li data-en="Cloud migration strategy" data-ar="استراتيجية الهجرة السحابية">Cloud migration strategy</li>
+                    <li data-en="Legacy system modernization" data-ar="تحديث الأنظمة القديمة">Legacy system modernization</li>
+                    <li data-en="Process automation" data-ar="أتمتة العمليات">Process automation</li>
+                    <li data-en="Change management & training" data-ar="إدارة التغيير والتدريب">Change management & training</li>
+                </ul>
+            </div>
+
+            <!-- Network Infrastructure -->
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3 class="service-title" data-en="Network Infrastructure" data-ar="البنية التحتية للشبكة">Network Infrastructure</h3>
+                <p class="service-description" data-en="Design, implement, and optimize robust network infrastructure for enterprise environments." data-ar="تصميم وتنفيذ وتحسين البنية التحتية القوية للشبكة لبيئات المؤسسات.">
+                    Design, implement, and optimize robust network infrastructure for enterprise environments.
+                </p>
+                <ul class="service-features">
+                    <li data-en="Network design & architecture" data-ar="تصميم وبنية الشبكة">Network design & architecture</li>
+                    <li data-en="Wireless & wired infrastructure" data-ar="البنية التحتية اللاسلكية والسلكية">Wireless & wired infrastructure</li>
+                    <li data-en="Network security & monitoring" data-ar="أمن الشبكة والمراقبة">Network security & monitoring</li>
+                    <li data-en="Performance optimization" data-ar="تحسين الأداء">Performance optimization</li>
+                </ul>
+            </div>
+
+            <!-- IT Strategy & Planning -->
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3 class="service-title" data-en="IT Strategy & Planning" data-ar="استراتيجية وتخطيط تقنية المعلومات">IT Strategy & Planning</h3>
+                <p class="service-description" data-en="Develop comprehensive IT strategies that drive business growth and operational efficiency." data-ar="تطوير استراتيجيات شاملة لتقنية المعلومات تدفع نمو الأعمال والكفاءة التشغيلية.">
+                    Develop comprehensive IT strategies that drive business growth and operational efficiency.
+                </p>
+                <ul class="service-features">
+                    <li data-en="Technology roadmap development" data-ar="تطوير خارطة طريق التكنولوجيا">Technology roadmap development</li>
+                    <li data-en="IT governance frameworks" data-ar="أطر حوكمة تقنية المعلومات">IT governance frameworks</li>
+                    <li data-en="Vendor selection & management" data-ar="اختيار وإدارة البائعين">Vendor selection & management</li>
+                    <li data-en="Disaster recovery planning" data-ar="تخطيط التعافي من الكوارث">Disaster recovery planning</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="section fade-in">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Featured Projects" data-ar="المشاريع المميزة">Featured Projects</h2>
+            <p class="section-subtitle" data-en="Delivering enterprise-grade IT solutions that drive business success" data-ar="تقديم حلول تقنية معلومات على مستوى المؤسسة تدفع نجاح الأعمال">
+                Delivering enterprise-grade IT solutions that drive business success
+            </p>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Healthcare IT Infrastructure -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title" data-en="Healthcare IT Infrastructure" data-ar="البنية التحتية لتقنية المعلومات الصحية">Healthcare IT Infrastructure</h3>
+                    <p class="project-subtitle" data-en="Enterprise Systems for 18+ Facilities" data-ar="أنظمة المؤسسة لـ ١٨+ منشأة">Enterprise Systems for 18+ Facilities</p>
+                </div>
+                <div class="project-body">
+                    <p class="project-description" data-en="Led comprehensive IT infrastructure for assisted-living and healthcare facilities (2020-2024). Implemented HIPAA-compliant systems, managed network infrastructure, ensured 99.8% uptime with zero security incidents. Protected sensitive patient data while maintaining operational continuity across all facilities." data-ar="قاد البنية التحتية الشاملة لتقنية المعلومات لمنشآت المساعدة والرعاية الصحية (٢٠٢٠-٢٠٢٤). نفذ أنظمة متوافقة مع HIPAA، وأدار البنية التحتية للشبكة، وضمن ٩٩.٨٪ وقت تشغيل مع صفر حوادث أمنية. حمى بيانات المرضى الحساسة مع الحفاظ على استمرارية التشغيل عبر جميع المنشآت.">
+                        Led comprehensive IT infrastructure for assisted-living and healthcare facilities (2020-2024). Implemented HIPAA-compliant systems, managed network infrastructure, ensured 99.8% uptime with zero security incidents. Protected sensitive patient data while maintaining operational continuity across all facilities.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-en="18+" data-ar="١٨+">18+</span>
+                            <span class="stat-label" data-en="Facilities" data-ar="منشأة">Facilities</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-en="99.8%" data-ar="٩٩.٨٪">99.8%</span>
+                            <span class="stat-label" data-en="Uptime" data-ar="وقت التشغيل">Uptime</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enterprise Security -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title" data-en="Enterprise Security & Compliance" data-ar="أمن المؤسسة والامتثال">Enterprise Security & Compliance</h3>
+                    <p class="project-subtitle" data-en="Zero Security Incidents (2020-2024)" data-ar="صفر حوادث أمنية (٢٠٢٠-٢٠٢٤)">Zero Security Incidents (2020-2024)</p>
+                </div>
+                <div class="project-body">
+                    <p class="project-description" data-en="Designed and implemented comprehensive cybersecurity frameworks for healthcare environments. Achieved zero security incidents across 4-year period through proactive monitoring, staff training, and robust security protocols. Ensured HIPAA compliance with regular audits and continuous improvement processes." data-ar="صمم ونفذ أطر الأمن السيبراني الشاملة لبيئات الرعاية الصحية. حقق صفر حوادث أمنية عبر فترة ٤ سنوات من خلال المراقبة الاستباقية وتدريب الموظفين وبروتوكولات الأمان القوية. ضمن الامتثال لـ HIPAA من خلال عمليات التدقيق المنتظمة وعمليات التحسين المستمر.">
+                        Designed and implemented comprehensive cybersecurity frameworks for healthcare environments. Achieved zero security incidents across 4-year period through proactive monitoring, staff training, and robust security protocols. Ensured HIPAA compliance with regular audits and continuous improvement processes.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-en="0" data-ar="٠">0</span>
+                            <span class="stat-label" data-en="Security Incidents" data-ar="حوادث أمنية">Security Incidents</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-en="100%" data-ar="١٠٠٪">100%</span>
+                            <span class="stat-label" data-en="HIPAA Compliant" data-ar="متوافق مع HIPAA">HIPAA Compliant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cloud Infrastructure -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title" data-en="Cloud & Network Solutions" data-ar="حلول السحابة والشبكة">Cloud & Network Solutions</h3>
+                    <p class="project-subtitle" data-en="Hybrid Infrastructure Implementation" data-ar="تنفيذ البنية التحتية الهجينة">Hybrid Infrastructure Implementation</p>
+                </div>
+                <div class="project-body">
+                    <p class="project-description" data-en="Architected and deployed hybrid cloud infrastructure solutions combining on-premises systems with cloud services. Network design and administration for enterprise environments. Database management and optimization. Seamless integration ensuring high availability and business continuity." data-ar="صمم ونشر حلول البنية التحتية السحابية الهجينة التي تجمع بين الأنظمة المحلية والخدمات السحابية. تصميم وإدارة الشبكة لبيئات المؤسسات. إدارة وتحسين قواعد البيانات. التكامل السلس الذي يضمن التوفر العالي واستمرارية الأعمال.">
+                        Architected and deployed hybrid cloud infrastructure solutions combining on-premises systems with cloud services. Network design and administration for enterprise environments. Database management and optimization. Seamless integration ensuring high availability and business continuity.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-en="Hybrid" data-ar="هجين">Hybrid</span>
+                            <span class="stat-label" data-en="Cloud Architecture" data-ar="بنية السحابة">Cloud Architecture</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-en="24/7" data-ar="٢٤/٧">24/7</span>
+                            <span class="stat-label" data-en="High Availability" data-ar="التوفر العالي">High Availability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Digital Transformation -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title" data-en="Digital Transformation Initiatives" data-ar="مبادرات التحول الرقمي">Digital Transformation Initiatives</h3>
+                    <p class="project-subtitle" data-en="Modernization & Process Automation" data-ar="التحديث وأتمتة العمليات">Modernization & Process Automation</p>
+                </div>
+                <div class="project-body">
+                    <p class="project-description" data-en="Led digital transformation projects modernizing legacy systems and automating manual processes. Strategic planning, change management, and staff training to ensure successful adoption. Delivered measurable ROI through improved efficiency, reduced operational costs, and enhanced service delivery." data-ar="قاد مشاريع التحول الرقمي لتحديث الأنظمة القديمة وأتمتة العمليات اليدوية. التخطيط الاستراتيجي وإدارة التغيير وتدريب الموظفين لضمان اعتماد ناجح. قدم عائد استثمار قابل للقياس من خلال تحسين الكفاءة وخفض التكاليف التشغيلية وتعزيز تقديم الخدمات.">
+                        Led digital transformation projects modernizing legacy systems and automating manual processes. Strategic planning, change management, and staff training to ensure successful adoption. Delivered measurable ROI through improved efficiency, reduced operational costs, and enhanced service delivery.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-en="25+" data-ar="٢٥+">25+</span>
+                            <span class="stat-label" data-en="Years Experience" data-ar="سنة خبرة">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-en="Multiple" data-ar="متعدد">Multiple</span>
+                            <span class="stat-label" data-en="Industries" data-ar="صناعات">Industries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="background: var(--light-gray);">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Get In Touch" data-ar="تواصل معي">Get In Touch</h2>
+            <p class="section-subtitle" data-en="Ready to discuss your IT infrastructure or consulting needs?" data-ar="هل أنت مستعد لمناقشة البنية التحتية لتقنية المعلومات أو احتياجاتك الاستشارية؟">
+                Ready to discuss your IT infrastructure or consulting needs?
+            </p>
+        </div>
+
+        <div class="contact-form">
+            <form action="https://formspree.io/f/myzdvjbj" method="POST" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name" class="form-label" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="service" class="form-label" data-en="Service Interest" data-ar="الخدمة المطلوبة">Service Interest</label>
+                        <select id="service" name="service" class="form-select" required>
+                            <option value="">Select a service...</option>
+                            <option value="enterprise-architecture">Enterprise Architecture Consulting</option>
+                            <option value="healthcare-it">Healthcare IT Systems</option>
+                            <option value="cybersecurity">Cybersecurity Assessment</option>
+                            <option value="digital-transformation">Digital Transformation</option>
+                            <option value="network">Network Infrastructure</option>
+                            <option value="it-strategy">IT Strategy & Planning</option>
+                            <option value="other">Other IT Services</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget" class="form-label" data-en="Project Budget" data-ar="ميزانية المشروع">Project Budget</label>
+                        <select id="budget" name="budget" class="form-select">
+                            <option value="">Select budget range...</option>
+                            <option value="under-5k">Under $5,000</option>
+                            <option value="5k-15k">$5,000 - $15,000</option>
+                            <option value="15k-50k">$15,000 - $50,000</option>
+                            <option value="50k-plus">$50,000+</option>
+                            <option value="discuss">Let's Discuss</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message" class="form-label" data-en="Project Details" data-ar="تفاصيل المشروع">Project Details</label>
+                    <textarea id="message" name="message" class="form-textarea" placeholder="Tell me about your IT project, challenges, and how I can help..." required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.facebook.com/obai.sukar" class="social-link" target="_blank" title="Facebook">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/obaisukar" class="social-link" target="_blank" title="LinkedIn">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@KarazahOfficial" class="social-link" target="_blank" title="YouTube">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/obaisukar" class="social-link" target="_blank" title="Instagram">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                </a>
+                <a href="mailto:obai@obaisukar.com" class="social-link" title="Email">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+                </a>
+            </div>
+            <p data-en="&copy; 2025 Obai Sukar. All rights reserved. Syrian-American Technology Professional." data-ar="&copy; ٢٠٢٥ عبي سكر. جميع الحقوق محفوظة. محترف تكنولوجيا سوري أمريكي.">&copy; 2025 Obai Sukar. All rights reserved. Syrian-American Technology Professional.</p>
+            <p style="margin-top: 1rem; opacity: 0.8;" data-en="IT Director | Cybersecurity Expert | Infrastructure Consultant | Digital Transformation Leader" data-ar="مدير تقنية المعلومات | خبير الأمن السيبراني | مستشار البنية التحتية | قائد التحول الرقمي">
+                IT Director | Cybersecurity Expert | Infrastructure Consultant | Digital Transformation Leader
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Fade-in on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+
+                if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', fadeInOnScroll);
+        window.addEventListener('load', fadeInOnScroll);
+
+        // Language toggle
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            document.documentElement.lang = currentLang;
+
+            if (currentLang === 'ar') {
+                document.body.classList.add('rtl');
+            } else {
+                document.body.classList.remove('rtl');
+            }
+
+            updateLanguage();
+        }
+
+        function updateLanguage() {
+            document.querySelectorAll('[data-en]').forEach(el => {
+                const translation = el.getAttribute(`data-${currentLang}`);
+                if (translation) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = translation;
+                    } else {
+                        el.innerHTML = translation;
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
