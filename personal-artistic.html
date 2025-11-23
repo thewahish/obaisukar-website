@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Enhanced SEO -->
+    <title>Obai Sukar | Award-Winning Media Pioneer & Tech Leader - Personal Journey</title>
+    <meta name="description" content="Syrian-American professional with 25+ years transforming media and technology. Mohammed Bin Rashid Award winner. Featured in NPR, Al Jazeera, Washington Post. Life story of activism and impact.">
+    <meta name="keywords" content="Obai Sukar, biography, life story, Syrian-American, activism, Radio Al-Kul, humanitarian broadcasting">
+    <meta name="author" content="Obai Sukar">
+    <link rel="canonical" href="https://obaisukar.com/personal">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://obaisukar.com/personal">
+    <meta property="og:title" content="Obai Sukar | Personal Journey - The Revolutionary">
+    <meta property="og:description" content="Life story of impact across media, technology, and humanitarian work. 25+ years transforming industries.">
+    <meta property="og:image" content="https://obaisukar.com/og-personal.jpg">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Obai Sukar | Personal Journey">
+    <meta property="twitter:description" content="Life story of impact across media, technology, and humanitarian work.">
+    <meta property="twitter:image" content="https://obaisukar.com/og-personal.jpg">
+
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Light.ttf') format('truetype');
+            font-weight: 300;
+        }
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Regular.ttf') format('truetype');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Medium.ttf') format('truetype');
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Black.ttf') format('truetype');
+            font-weight: 900;
+        }
+
+        :root {
+            --deep-indigo: #292663;
+            --sky-blue: #00AEEF;
+            --hot-pink: #EC008C;
+            --orange: #FBB04C;
+            --purple: #92278F;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: var(--white);
+            color: var(--deep-indigo);
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Glassmorphic Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 3rem;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(41, 38, 99, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 30px rgba(41, 38, 99, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .home-btn {
+            padding: 0.6rem 1.5rem;
+            background: linear-gradient(135deg, var(--purple), var(--hot-pink));
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(146, 39, 143, 0.3);
+        }
+
+        .home-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(146, 39, 143, 0.4);
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--deep-indigo);
+            letter-spacing: 1px;
+        }
+
+        .language-toggle {
+            background: rgba(41, 38, 99, 0.1);
+            border: 2px solid rgba(41, 38, 99, 0.2);
+            color: var(--deep-indigo);
+            border-radius: 50px;
+            padding: 0.6rem 1.2rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .language-toggle:hover {
+            background: var(--deep-indigo);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&q=80') center/cover;
+            background-attachment: fixed;
+            filter: brightness(0.7);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(146, 39, 143, 0.6), rgba(236, 0, 140, 0.6));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: var(--white);
+            padding: 2rem;
+            max-width: 1000px;
+        }
+
+        .hero-logo {
+            margin-bottom: 2rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero-title {
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease 0.2s both;
+            letter-spacing: 3px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .hero-cta:hover {
+            background: var(--white);
+            color: var(--purple);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(146, 39, 143, 0.05), rgba(236, 0, 140, 0.05));
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(41, 38, 99, 0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--purple);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(146, 39, 143, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--purple), var(--hot-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--deep-indigo);
+        }
+
+        /* Bio Section - Split Screen */
+        .bio-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .bio-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .bio-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(41, 38, 99, 0.2);
+        }
+
+        .bio-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .bio-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .bio-content {
+            padding: 2rem;
+        }
+
+        .bio-title {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--deep-indigo);
+            margin-bottom: 1.5rem;
+        }
+
+        .bio-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .bio-highlight {
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(146, 39, 143, 0.1), rgba(236, 0, 140, 0.1));
+            border-left: 5px solid var(--purple);
+            border-radius: 10px;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+
+        /* Achievements Section */
+        .achievements-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(146, 39, 143, 0.05), rgba(236, 0, 140, 0.05));
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--deep-indigo);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--text-light);
+        }
+
+        .achievements-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .achievement-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(41, 38, 99, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(146, 39, 143, 0.2);
+        }
+
+        .achievement-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .achievement-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(146, 39, 143, 0.7), rgba(236, 0, 140, 0.7));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+        }
+
+        .achievement-content {
+            padding: 2rem;
+        }
+
+        .achievement-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--deep-indigo);
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-subtitle {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--purple);
+            margin-bottom: 1rem;
+        }
+
+        .achievement-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-light);
+        }
+
+        /* Activism Section */
+        .activism-section {
+            padding: 6rem 2rem;
+            background: var(--deep-indigo);
+            color: var(--white);
+        }
+
+        .activism-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .activism-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .activism-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .activism-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .activism-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .activism-card p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        .press-section {
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .press-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .press-logo {
+            padding: 1rem 2.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .press-logo:hover {
+            background: var(--white);
+            color: var(--deep-indigo);
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 6rem 2rem;
+            background: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80') center/cover fixed;
+            position: relative;
+        }
+
+        .contact-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(146, 39, 143, 0.9), rgba(236, 0, 140, 0.9));
+        }
+
+        .contact-container {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            color: var(--white);
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.3);
+            border-color: var(--white);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--white);
+            color: var(--purple);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--deep-indigo);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--purple);
+            transform: translateY(-5px);
+        }
+
+        .social-link svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--white);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .bio-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .navbar {
+                padding: 1rem 1.5rem;
+            }
+
+            .achievements-grid,
+            .activism-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="landing-artistic.html" class="home-btn" data-en="← Home" data-ar="الرئيسية ←">← Home</a>
+                <div class="logo-text" data-en="OBAI SUKAR | Personal" data-ar="عبي سكر | شخصي">OBAI SUKAR | Personal</div>
+            </div>
+            <button class="language-toggle" onclick="toggleLanguage()">
+                <span data-en="🌐 عربي" data-ar="🌐 English">🌐 عربي</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="./Logo White/Logo_White.png" alt="Obai Sukar" style="height: 120px; filter: drop-shadow(0 10px 40px rgba(255, 255, 255, 0.3));">
+            </div>
+            <h1 class="hero-title" data-en="THE REVOLUTIONARY" data-ar="الثوري">THE REVOLUTIONARY</h1>
+            <p class="hero-subtitle" data-en="Life, Impact & Purpose" data-ar="الحياة، التأثير، والهدف">Life, Impact & Purpose</p>
+            <a href="#contact" class="hero-cta" data-en="Let's Connect →" data-ar="لنتواصل ←">Let's Connect →</a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section fade-in">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" data-count="25">25+</div>
+                <div class="stat-label" data-en="Years Experience" data-ar="سنة خبرة">Years Experience</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2</div>
+                <div class="stat-label" data-en="Major Awards" data-ar="جائزة رئيسية">Major Awards</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5</div>
+                <div class="stat-label" data-en="Press Features" data-ar="تغطية صحفية">Press Features</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">∞</div>
+                <div class="stat-label" data-en="Lives Impacted" data-ar="حياة متأثرة">Lives Impacted</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section class="bio-section fade-in">
+        <div class="bio-container">
+            <div class="bio-image">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80" alt="Professional">
+            </div>
+            <div class="bio-content">
+                <h2 class="bio-title" data-en="Life Story" data-ar="قصة الحياة">Life Story</h2>
+                <p class="bio-text">
+                    Obai Sukar's life is defined by transformation—transforming media, technology, and lives. Born in Syria, his journey took him across continents, building bridges between cultures through sound, media, and technology.
+                </p>
+                <p class="bio-text">
+                    From the recording studios of Los Angeles to the broadcast facilities of the Middle East, from enterprise IT infrastructure in American healthcare to educational media reaching millions, his career spans two decades of relentless innovation.
+                </p>
+                <div class="bio-highlight">
+                    "My mission has always been to use technology and media not just as tools, but as forces for positive change—to educate, to empower, and to give voice to the voiceless."
+                </div>
+                <p class="bio-text">
+                    As a graduate of the Los Angeles Recording School, Obai honed his craft in sound engineering, earning recognition for his technical excellence. His work spans Academy Award-winning films, humanitarian broadcasting reaching millions, and IT systems protecting critical healthcare data.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements-section fade-in">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Achievements" data-ar="الإنجازات">Achievements</h2>
+            <p class="section-subtitle" data-en="Recognition across media, technology, and humanitarian work" data-ar="تقدير عبر الإعلام والتكنولوجيا والعمل الإنساني">Recognition across media, technology, and humanitarian work</p>
+        </div>
+
+        <div class="achievements-grid">
+            <!-- Award 1 -->
+            <div class="achievement-card">
+                <div class="achievement-image" style="background-image: url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&q=80');">
+                    <div class="achievement-overlay">🏆</div>
+                </div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title" data-en="Mohammed Bin Rashid Award" data-ar="جائزة محمد بن راشد">Mohammed Bin Rashid Award</h3>
+                    <p class="achievement-subtitle" data-en="Arabic Language Award - 2019" data-ar="جائزة اللغة العربية - ٢٠١٩">Arabic Language Award - 2019</p>
+                    <p class="achievement-description">
+                        Recognized for outstanding contribution to Arabic educational content through Karazah Channel, reaching hundreds of thousands of students worldwide.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Award 2 -->
+            <div class="achievement-card">
+                <div class="achievement-image" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&q=80');">
+                    <div class="achievement-overlay">🎬</div>
+                </div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title" data-en="Academy Award Film" data-ar="فيلم حائز على جائزة الأكاديمية">Academy Award Film</h3>
+                    <p class="achievement-subtitle" data-en="Sound Design - Cloud Kumo, 2016" data-ar="تصميم الصوت - كلاود كومو، ٢٠١٦">Sound Design - Cloud Kumo, 2016</p>
+                    <p class="achievement-description">
+                        Sound designer for Student Academy Award-winning animated film, demonstrating technical excellence in audio post-production.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Award 3 -->
+            <div class="achievement-card">
+                <div class="achievement-image" style="background-image: url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80');">
+                    <div class="achievement-overlay">📺</div>
+                </div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title" data-en="Digital Media Impact" data-ar="تأثير الإعلام الرقمي">Digital Media Impact</h3>
+                    <p class="achievement-subtitle" data-en="739K+ Subscribers, 310M+ Views" data-ar="٧٣٩ ألف+ مشترك، ٣١٠ مليون+ مشاهدة">739K+ Subscribers, 310M+ Views</p>
+                    <p class="achievement-description">
+                        Co-founded Karazah Channel, transforming Arabic educational content and reaching millions of students across the Middle East.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Award 4 -->
+            <div class="achievement-card">
+                <div class="achievement-image" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80');">
+                    <div class="achievement-overlay">💻</div>
+                </div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title" data-en="Enterprise IT Excellence" data-ar="التميز في تقنية المعلومات">Enterprise IT Excellence</h3>
+                    <p class="achievement-subtitle" data-en="99.8% Uptime, Zero Incidents" data-ar="٩٩.٨٪ وقت التشغيل، صفر حوادث">99.8% Uptime, Zero Incidents</p>
+                    <p class="achievement-description">
+                        Led IT infrastructure for 18+ healthcare facilities, protecting sensitive patient data with zero security incidents over 4 years.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Award 5 -->
+            <div class="achievement-card">
+                <div class="achievement-image" style="background-image: url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&q=80');">
+                    <div class="achievement-overlay">📻</div>
+                </div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title" data-en="Humanitarian Broadcasting" data-ar="البث الإنساني">Humanitarian Broadcasting</h3>
+                    <p class="achievement-subtitle" data-en="Radio Al-Kul - 500K Daily" data-ar="راديو الكل - ٥٠٠ ألف يومياً">Radio Al-Kul - 500K Daily</p>
+                    <p class="achievement-description">
+                        Co-founded independent media station during Syrian civil war, providing uncensored news to 500K daily listeners in conflict zones.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Award 6 -->
+            <div class="achievement-card">
+                <div class="achievement-image" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80');">
+                    <div class="achievement-overlay">🌍</div>
+                </div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title" data-en="Cross-Industry Impact" data-ar="التأثير متعدد الصناعات">Cross-Industry Impact</h3>
+                    <p class="achievement-subtitle" data-en="25+ Years Excellence" data-ar="٢٥+ سنة تميز">25+ Years Excellence</p>
+                    <p class="achievement-description">
+                        Led projects across media production, healthcare IT, educational technology, and broadcasting—serving international clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activism Section -->
+    <section class="activism-section fade-in">
+        <div class="activism-container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: var(--white);" data-en="Activism & Impact" data-ar="النشاط والتأثير">Activism & Impact</h2>
+                <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9);" data-en="Using media and technology for human rights and social change" data-ar="استخدام الإعلام والتكنولوجيا لحقوق الإنسان والتغيير الاجتماعي">Using media and technology for human rights and social change</p>
+            </div>
+
+            <div class="activism-grid">
+                <div class="activism-card">
+                    <h3 data-en="Radio Al-Kul" data-ar="راديو الكل">Radio Al-Kul</h3>
+                    <p>
+                        Co-founded independent media station during Syrian civil war. Built broadcast studios from ground up, trained journalist teams, provided uncensored news to conflict zones through revolutionary mobile FM transmission.
+                    </p>
+                </div>
+
+                <div class="activism-card">
+                    <h3 data-en="Educational Access" data-ar="الوصول التعليمي">Educational Access</h3>
+                    <p>
+                        Through Karazah Channel, provided free high-quality Arabic educational content to students lacking access to quality education, democratizing learning across socioeconomic boundaries.
+                    </p>
+                </div>
+
+                <div class="activism-card">
+                    <h3 data-en="Human Rights Advocacy" data-ar="الدفاع عن حقوق الإنسان">Human Rights Advocacy</h3>
+                    <p>
+                        Active voice for Syrian revolution and human rights. Utilized media platforms to raise awareness about humanitarian crises, document atrocities, and advocate for civilian protection.
+                    </p>
+                </div>
+            </div>
+
+            <div class="press-section">
+                <h3 style="font-size: 2rem; margin-bottom: 2rem;" data-en="Press Coverage" data-ar="التغطية الصحفية">Press Coverage</h3>
+                <div class="press-grid">
+                    <div class="press-logo">NPR</div>
+                    <div class="press-logo">Al Jazeera</div>
+                    <div class="press-logo">Washington Post</div>
+                    <div class="press-logo">BBC Arabic</div>
+                    <div class="press-logo">Gulf News</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section fade-in" id="contact">
+        <div class="contact-overlay"></div>
+        <div class="contact-container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: var(--white);" data-en="Let's Connect" data-ar="لنتواصل">Let's Connect</h2>
+                <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9);" data-en="Ready to collaborate or discuss a project?" data-ar="هل أنت مستعد للتعاون أو مناقشة مشروع؟">Ready to collaborate or discuss a project?</p>
+            </div>
+
+            <div class="contact-form">
+                <form action="https://formspree.io/f/myzdvjbj" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                            <input type="text" name="name" class="form-input" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+                            <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" data-en="Service Interest" data-ar="الخدمة المطلوبة">Service Interest</label>
+                            <select name="service" class="form-select" required>
+                                <option value="">Select service...</option>
+                                <option value="consultation">General Consultation</option>
+                                <option value="media">Media & Production</option>
+                                <option value="it">IT & Technology</option>
+                                <option value="speaking">Speaking Engagement</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="Message" data-ar="الرسالة">Message</label>
+                        <textarea name="message" class="form-textarea" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit" data-en="Send My Message" data-ar="إرسال رسالتي">Send My Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.facebook.com/obai.sukar" class="social-link" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/obaisukar" class="social-link" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@KarazahOfficial" class="social-link" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="mailto:obai@obaisukar.com" class="social-link">
+                <svg viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+            </a>
+        </div>
+        <p>&copy; 2025 Obai Sukar. All rights reserved.</p>
+        <p style="margin-top: 1rem; opacity: 0.8;">Media Pioneer | Technology Leader | Human Rights Activist</p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const heroBackground = document.querySelector('.hero-background');
+            const scrolled = window.pageYOffset;
+            if (heroBackground) {
+                heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Fade-in on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(el => fadeObserver.observe(el));
+
+        // Language toggle
+        let currentLang = 'en';
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            document.documentElement.lang = currentLang;
+            document.body.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            updateLanguage();
+        }
+
+        function updateLanguage() {
+            document.querySelectorAll('[data-en]').forEach(el => {
+                const translation = el.getAttribute(`data-${currentLang}`);
+                if (translation) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = translation;
+                    } else {
+                        el.textContent = translation;
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
