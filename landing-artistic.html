@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Enhanced SEO -->
+    <title>Obai Sukar | Award-Winning Media Pioneer & Technology Leader</title>
+    <meta name="description" content="Syrian-American professional with 25+ years transforming media and technology. Sound designer for Academy Award-winning film, IT Director with 99.8% uptime, 739K+ YouTube subscribers. Featured in NPR, Al Jazeera, Washington Post.">
+    <meta name="keywords" content="Obai Sukar, sound engineer, IT director, media producer, Academy Award, HIPAA compliance, Karazah Channel, Radio Al-Kul">
+    <meta name="author" content="Obai Sukar">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://obaisukar.com">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://obaisukar.com">
+    <meta property="og:title" content="Obai Sukar | Award-Winning Media Pioneer & Technology Leader">
+    <meta property="og:description" content="25+ years transforming media and technology. Sound design for Academy Award-winning film. 739K+ subscribers. 99.8% IT uptime.">
+    <meta property="og:image" content="https://obaisukar.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://obaisukar.com">
+    <meta property="twitter:title" content="Obai Sukar | Award-Winning Media Pioneer & Technology Leader">
+    <meta property="twitter:description" content="25+ years transforming media and technology. Sound design for Academy Award-winning film.">
+    <meta property="twitter:image" content="https://obaisukar.com/og-image.jpg">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Obai Sukar",
+      "jobTitle": ["Sound Engineer", "IT Director", "Media Producer"],
+      "description": "Award-winning Syrian-American media professional and technology leader",
+      "url": "https://obaisukar.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/obaisukar",
+        "https://www.youtube.com/@KarazahOfficial",
+        "https://www.facebook.com/obai.sukar",
+        "https://twitter.com/obaisukar"
+      ],
+      "award": [
+        "Mohammed Bin Rashid Arabic Language Award (2019)",
+        "Sound Design - Student Academy Award Silver Film (2016)"
+      ],
+      "nationality": "Syrian-American",
+      "alumniOf": "Los Angeles Recording School",
+      "knowsAbout": ["Sound Engineering", "IT Management", "HIPAA Compliance", "Media Production"]
+    }
+    </script>
+
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Light.ttf') format('truetype');
+            font-weight: 300;
+        }
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Regular.ttf') format('truetype');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Medium.ttf') format('truetype');
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./Fonts/Roboto-Black.ttf') format('truetype');
+            font-weight: 900;
+        }
+
+        :root {
+            --deep-indigo: #292663;
+            --sky-blue: #00AEEF;
+            --hot-pink: #EC008C;
+            --orange: #FBB04C;
+            --purple: #92278F;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            overflow-x: hidden;
+            background: #000;
+            cursor: default;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--white);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            transition: all 0.1s ease;
+            z-index: 10000;
+            mix-blend-mode: difference;
+        }
+
+        /* Navigation - Glassmorphic */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 3rem;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(41, 38, 99, 0.9);
+            backdrop-filter: blur(30px);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-img {
+            height: 50px;
+            filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.3));
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: 2px;
+        }
+
+        .language-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+            border-radius: 50px;
+            padding: 0.6rem 1.2rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .language-toggle:hover {
+            background: var(--white);
+            color: var(--deep-indigo);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Hero Section - Full Screen */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80') center/cover;
+            background-attachment: fixed;
+            filter: brightness(0.6);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(41, 38, 99, 0.7) 0%, rgba(146, 39, 143, 0.5) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: var(--white);
+            padding: 2rem;
+            max-width: 1000px;
+        }
+
+        .hero-logo {
+            margin-bottom: 2rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero-title {
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease 0.2s both;
+            letter-spacing: 3px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-tagline {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--orange);
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: linear-gradient(135deg, var(--hot-pink), var(--orange));
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.8s both;
+            box-shadow: 0 10px 40px rgba(236, 0, 140, 0.4);
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 60px rgba(236, 0, 140, 0.6);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        .scroll-indicator svg {
+            width: 30px;
+            height: 30px;
+            stroke: var(--white);
+            opacity: 0.8;
+        }
+
+        /* Three-Section Grid */
+        .three-sections {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .section-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .section-card:hover {
+            flex-grow: 1.5;
+            transform: scale(1.02);
+        }
+
+        .section-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .section-card:hover .section-bg {
+            transform: scale(1.1);
+        }
+
+        /* Glassmorphic Overlays */
+        .section-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+            transition: all 0.5s ease;
+        }
+
+        .section-card.personal .section-overlay {
+            background: linear-gradient(135deg, rgba(146, 39, 143, 0.85), rgba(236, 0, 140, 0.85));
+            backdrop-filter: blur(10px);
+        }
+
+        .section-card.media .section-overlay {
+            background: linear-gradient(135deg, rgba(236, 0, 140, 0.85), rgba(251, 176, 76, 0.85));
+            backdrop-filter: blur(10px);
+        }
+
+        .section-card.tech .section-overlay {
+            background: linear-gradient(135deg, rgba(41, 38, 99, 0.85), rgba(0, 174, 239, 0.85));
+            backdrop-filter: blur(10px);
+        }
+
+        .section-card:hover .section-overlay {
+            backdrop-filter: blur(5px);
+        }
+
+        .section-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+
+        .section-card:hover .section-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--white);
+            text-align: center;
+            max-width: 300px;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .section-stats {
+            list-style: none;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-stats li {
+            font-size: 1rem;
+            color: var(--white);
+            margin: 0.5rem 0;
+            opacity: 0.9;
+        }
+
+        .section-stats li::before {
+            content: "✓ ";
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .section-btn {
+            padding: 0.9rem 2.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .section-btn:hover {
+            background: var(--white);
+            color: var(--deep-indigo);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .three-sections {
+                grid-template-columns: 1fr;
+            }
+
+            .section-card {
+                min-height: 50vh;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+
+            .navbar {
+                padding: 1rem 1.5rem;
+            }
+
+            .logo-img {
+                height: 40px;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-nav">
+                <img src="./Logo White/Logo_White.png" alt="Obai Sukar Logo" class="logo-img">
+                <div class="logo-text" data-en="OBAI SUKAR" data-ar="عبي سكر">OBAI SUKAR</div>
+            </div>
+            <button class="language-toggle" onclick="toggleLanguage()">
+                <span data-en="🌐 عربي" data-ar="🌐 English">🌐 عربي</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="./Logo White/Logo_White.png" alt="Obai Sukar" style="height: 120px; filter: drop-shadow(0 10px 40px rgba(255, 255, 255, 0.3));">
+            </div>
+            <h1 class="hero-title" data-en="THE REVOLUTIONARY" data-ar="الثوري">THE REVOLUTIONARY</h1>
+            <p class="hero-subtitle" data-en="Transforming Media & Technology for 25+ Years" data-ar="تحويل الإعلام والتكنولوجيا لأكثر من ٢٥ عاماً">Transforming Media & Technology for 25+ Years</p>
+            <p class="hero-tagline" data-en="Sound Designer • IT Director • Humanitarian Broadcaster" data-ar="مصمم صوت • مدير تقنية المعلومات • مذيع إنساني">Sound Designer • IT Director • Humanitarian Broadcaster</p>
+            <a href="#explore" class="hero-cta" data-en="Explore My Work →" data-ar="استكشف أعمالي ←">Explore My Work →</a>
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('explore').scrollIntoView({behavior: 'smooth'})">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Three Sections -->
+    <section class="three-sections" id="explore">
+        <!-- Personal -->
+        <a href="personal-artistic.html" class="section-card personal">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Personal" class="section-bg">
+            <div class="section-overlay">
+                <svg class="section-icon" viewBox="0 0 24 24" fill="white">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+                <h2 class="section-title" data-en="PERSONAL" data-ar="شخصي">PERSONAL</h2>
+                <p class="section-subtitle" data-en="Life journey, achievements & activism" data-ar="رحلة الحياة، الإنجازات والنشاط">Life journey, achievements & activism</p>
+                <ul class="section-stats">
+                    <li data-en="Award-Winning Professional" data-ar="محترف حائز على جوائز">Award-Winning Professional</li>
+                    <li data-en="25+ Years Global Impact" data-ar="٢٥+ سنة تأثير عالمي">25+ Years Global Impact</li>
+                    <li data-en="Featured in Major Press" data-ar="مميز في الصحافة الكبرى">Featured in Major Press</li>
+                </ul>
+                <span class="section-btn" data-en="My Journey →" data-ar="رحلتي ←">My Journey →</span>
+            </div>
+        </a>
+
+        <!-- Media -->
+        <a href="media-artistic.html" class="section-card media">
+            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80" alt="Media" class="section-bg">
+            <div class="section-overlay">
+                <svg class="section-icon" viewBox="0 0 24 24" fill="white">
+                    <path d="M12 3v9.28c-.47-.17-.97-.28-1.5-.28C8.01 12 6 14.01 6 16.5S8.01 21 10.5 21c2.31 0 4.2-1.75 4.45-4H15V6h4V3h-7z"/>
+                </svg>
+                <h2 class="section-title" data-en="MEDIA" data-ar="الإعلام">MEDIA</h2>
+                <p class="section-subtitle" data-en="Sound engineering & media production" data-ar="هندسة الصوت والإنتاج الإعلامي">Sound engineering & media production</p>
+                <ul class="section-stats">
+                    <li data-en="Academy Award Film" data-ar="فيلم حائز على جائزة الأكاديمية">Academy Award Film</li>
+                    <li data-en="739K+ Subscribers" data-ar="٧٣٩ ألف+ مشترك">739K+ Subscribers</li>
+                    <li data-en="310M+ Views" data-ar="٣١٠ مليون+ مشاهدة">310M+ Views</li>
+                </ul>
+                <span class="section-btn" data-en="Media Work →" data-ar="الأعمال الإعلامية ←">Media Work →</span>
+            </div>
+        </a>
+
+        <!-- Tech -->
+        <a href="tech-artistic.html" class="section-card tech">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80" alt="Technology" class="section-bg">
+            <div class="section-overlay">
+                <svg class="section-icon" viewBox="0 0 24 24" fill="white">
+                    <path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
+                </svg>
+                <h2 class="section-title" data-en="TECHNOLOGY" data-ar="التكنولوجيا">TECHNOLOGY</h2>
+                <p class="section-subtitle" data-en="Enterprise IT & infrastructure leadership" data-ar="قيادة تقنية المعلومات للمؤسسات">Enterprise IT & infrastructure leadership</p>
+                <ul class="section-stats">
+                    <li data-en="99.8% Uptime" data-ar="٩٩.٨٪ وقت التشغيل">99.8% Uptime</li>
+                    <li data-en="18+ Healthcare Facilities" data-ar="١٨+ منشأة صحية">18+ Healthcare Facilities</li>
+                    <li data-en="Zero Security Incidents" data-ar="صفر حوادث أمنية">Zero Security Incidents</li>
+                </ul>
+                <span class="section-btn" data-en="IT Solutions →" data-ar="الحلول التقنية ←">IT Solutions →</span>
+            </div>
+        </a>
+    </section>
+
+    <script>
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(1.5)';
+                cursor.style.borderColor = 'var(--orange)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.borderColor = 'var(--white)';
+            });
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Language Toggle
+        let currentLang = 'en';
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            document.documentElement.lang = currentLang;
+            document.body.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            updateLanguage();
+        }
+
+        function updateLanguage() {
+            document.querySelectorAll('[data-en]').forEach(el => {
+                const translation = el.getAttribute(`data-${currentLang}`);
+                if (translation) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = translation;
+                    } else {
+                        el.textContent = translation;
+                    }
+                }
+            });
+        }
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const heroBackground = document.querySelector('.hero-background');
+            const scrolled = window.pageYOffset;
+            heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+
+        // Section Card Animation on View
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(50px)';
+            card.style.transition = 'all 0.8s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

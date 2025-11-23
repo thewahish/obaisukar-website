@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "projectName": "obaisukar-website",
+=======
+  "projectName": "website",
+>>>>>>> f1fc9b2 (Add/Update quest-status.json for progress tracking)
   "status": "active",
   "priority": "low",
   "progressPercent": 0,
@@ -12,6 +16,10 @@
   ],
   "blockers": [],
   "notes": "Auto-generated quest-status.json - please review and update with accurate information",
+<<<<<<< HEAD
   "githubRepo": "github.com/thewahish/obaisukar-website",
+=======
+  "githubRepo": "github.com/thewahish/website",
+>>>>>>> f1fc9b2 (Add/Update quest-status.json for progress tracking)
   "lastUpdated": "2025-11-22"
 }
