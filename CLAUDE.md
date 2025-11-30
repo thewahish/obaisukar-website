@@ -1,87 +1,152 @@
-# Claude Memory File - Obai Sukar Website Project
+﻿# CLAUDE Project Instructions
+**Auto-generated from Master AI Ecosystem**
+**Project:** website
+**Domain:** Web-Development
+**Last Updated:** 2025-11-30_18-25-06
 
-## Project Overview
-Working on Obai Sukar's professional portfolio website with focus on mobile UX optimization, desktop improvements, and enhanced animations.
+---
 
-## Key Files
-- **Main working file**: `obai_sukar_website_final.html` (stable, professional version)
-- **Stable backup**: `obai_sukar_website_stable_backup.html` (created 2025-09-15)
-- **Failed animated attempt**: `obai_sukar_website_animated.html` (REJECTED - wrong content/colors)
-- **Original reference**: `obai_sukar_website.html` (had language toggle artifacts)
+## ðŸŽ¯ PROJECT CONTEXT
 
-## Reference Websites (User-Provided)
-- https://obaisukar.com/resume.html
-- https://obaisukar.com/Artistic_Resume.html
-These contain the actual content and structure that should be used as reference for any enhancements.
+### **Project Classification**
+- **Domain:** [Web-Development|Games|Business-Tools|Content-Creation|Research-Development]
+- **Status:** [Active|Maintenance|Complete|Archived]  
+- **Priority:** [Urgent|High|Medium|Low]
+- **Tech Stack:** [Languages, frameworks, tools]
 
-## Current Status
-- ❌ Animated version created was UNACCEPTABLE - used wrong content and colors
-- ✅ Stable version (`obai_sukar_website_final.html`) is the correct base
-- ✅ Backup created successfully
-- 🔄 Need to revert to stable version and start animation enhancements properly
+### **Project Summary**
+[Brief description of project purpose and current state]
 
-## Features Successfully Implemented in Stable Version
-1. **Mobile Navigation**: Tab-based system to reduce scrolling
-2. **Complete Content**: All 8 sections with proper content
-3. **Testimonials**: Carousel with client photos and navigation
-4. **Social Media**: Real links (Facebook, Twitter, LinkedIn, YouTube, Instagram, Email)
-5. **cPanel Integration**: Links to obaisukar.com:2083 for all projects
-6. **Media Gallery**: YouTube video placeholders (4 slots)
-7. **SEO Optimization**: Complete meta tags, Open Graph, Twitter Cards, Schema.org
-8. **Projects Section**:
-   - Eternal Parade (Executive Producer & Host, 5M+ viewers)
-   - Prime Time Talk (Host & Creative Director, 300+ Episodes)
-   - Cultural Crossroads (Executive Producer, Award-winning)
-   - Media Spotlight (Host & Producer, Industry Recognition)
+---
 
-## User's Animation Requirements (Still Needed)
-- "More animations on mouse over" - sophisticated hover effects
-- "Something different for the timeline" - enhanced timeline animations
-- "Everything seems merged together as one white background" - better visual separation
-- Maintain "classy" aesthetic
-- Keep all existing content and functionality
+## ðŸ¤– AGENT PIPELINE CONFIGURATION
 
-## Critical Notes
-- **NEVER change the core content** - only enhance existing elements
-- **ALWAYS reference user's live websites** for content accuracy
-- **Maintain professional color scheme** - no random gradient backgrounds
-- **Preserve all functionality** - testimonials, navigation, cPanel, social links
-- **Mobile-first approach** - ensure mobile experience remains optimal
+### **Recommended Pipeline** (Auto-selected by domain)
+[Agent sequence will be populated based on domain classification]
 
-## Next Steps (For Future Session)
-1. Start with `obai_sukar_website_final.html` as base
-2. Add subtle hover animations WITHOUT changing layout/colors
-3. Enhance timeline with interactive elements
-4. Add visual separators between sections
-5. Implement sophisticated but professional animations
-6. Test thoroughly before presenting
+### **Domain-Specific Rules**
+[Custom rules for this domain type will be inserted here]
 
-## Testimonials Structure
-Located in `D:\Website\Testimonials\` folder:
-- kerem-tekin.png
-- mohamad-alkhouli.png
-- sinan-hatahet.png
-- ammar-shukairy.png
-- michael-shagoury.png
-- khalid-saleh.png
-(All currently placeholders with initials fallback)
+---
 
-## Technical Notes
-- Use `cp` command for file operations (not `copy` on this system)
-- Test with `start filename.html` command
-- Mobile breakpoint: 768px
-- Carousel auto-play disabled per user preference
-- Navigation: 8 tabs (About, Experience, Projects, Skills, Education, Testimonials, Media, Contact)
+## ðŸ“‹ CURRENT PROJECT STATUS
 
-## User Feedback History
-- "Mobile experience too much scrolling" → Fixed with tabs
-- "Carousel moving too fast" → Disabled auto-play
-- "Don't like orange lines" → Fixed styling
-- "Projects missing" → Restored content
-- "Need cPanel, social media, SEO" → All implemented
-- "Save and create animated version" → FAILED attempt, need to restart properly
+### **Quest Tracking**
+- **Current Quest:** [Active development focus]
+- **Progress:** [Percentage complete]
+- **Next Milestones:** [Upcoming tasks]
 
-## Important Commands
-- Backup: `cp "source.html" "backup.html"`
-- Open: `start filename.html`
-- Always test in browser before finalizing
+### **Quality Gates**
+- [ ] Tests passing
+- [ ] Linting clean  
+- [ ] Documentation updated
+- [ ] GitHub synced
+- [ ] Master system integration verified
+
+---
+
+## ðŸ”— INTEGRATION POINTS
+
+### **Dependencies**
+- **Parent Projects:** [Projects this depends on]
+- **Child Projects:** [Projects that depend on this]
+- **Shared Assets:** [Resources from GLOBAL-ASSETS]
+
+### **External Connections**
+- **APIs:** [External service integrations]
+- **Databases:** [Data storage connections]
+- **Services:** [Third-party tools and services]
+
+---
+
+## ðŸ—ï¸ MASTER ECOSYSTEM INTEGRATION
+
+### **Session Rules** (Auto-loaded from Master System)
+1. **Universal Verification:** All claims must be tagged with trust levels (âœ…âš ï¸â“âŒðŸ”„)
+2. **Logging Required:** All significant actions logged with timestamps
+3. **Backup Protocol:** Files moved to OLD/ before deletion, never destroyed
+4. **Quality Standards:** Domain-specific benchmarks must be met
+5. **GitHub Sync:** All changes committed with proper attribution
+
+### **Agent 13 Verification** (Applied to all outputs)
+- Source trust level verification for every claim
+- Primary source requirement for product features  
+- Visual verification for generated content
+- Project-specific quality threshold enforcement
+
+---
+
+## ðŸ“ PROJECT STRUCTURE
+
+```
+website/
+â”œâ”€â”€ CLAUDE.md                 # This file
+â”œâ”€â”€ README.md                 # Project documentation
+â”œâ”€â”€ quest-status.json         # Progress tracking
+â”œâ”€â”€ .claude/                  # Local AI assets
+â”‚   â”œâ”€â”€ logs/
+â”‚   â”œâ”€â”€ assets/
+â”‚   â”œâ”€â”€ backups/
+â”‚   â””â”€â”€ versions/
+â”œâ”€â”€ OLD/                      # Archived files (never delete)
+â””â”€â”€ [project-specific files]
+```
+
+---
+
+## ðŸ”§ PROJECT-SPECIFIC CONFIGURATION
+
+### **Development Commands**
+```bash
+# Common operations for this project
+[Project-specific commands will be populated]
+```
+
+### **Testing & Deployment**
+```bash  
+# Quality gates and deployment
+[Testing and deployment commands]
+```
+
+### **GitHub Integration**
+```bash
+# Repository: [GITHUB-REPO-URL]
+# Branch strategy: [BRANCH-SETUP]
+# Sync schedule: [SYNC-FREQUENCY]
+```
+
+---
+
+## ðŸ“Š SUCCESS METRICS
+
+### **Quality Indicators** (Domain-specific)
+[Metrics based on project domain]
+
+### **Progress Tracking**
+- **Files Modified:** [Tracked automatically]
+- **Tests Added:** [Quality improvement tracking]  
+- **Issues Resolved:** [Problem-solving metrics]
+- **Features Completed:** [Development progress]
+
+---
+
+## âš¡ QUICK REFERENCE
+
+### **Emergency Protocols**
+- **Data Recovery:** Check OLD/ folder for previous versions
+- **Sync Issues:** Run quest-project-sync from root
+- **Quality Failures:** Re-run appropriate agent pipeline
+- **Integration Problems:** Verify dependencies in GLOBAL-ASSETS
+
+### **Common Tasks**
+- **Start Session:** Read this file + check quest-status.json
+- **Make Changes:** Follow backup protocol + log actions
+- **End Session:** Update quest-status.json + sync to GitHub
+- **Need Help:** Reference MASTER_AI_ECOSYSTEM_PROMPT.md
+
+---
+
+**ðŸŽ¯ Project ready for AI-assisted development with full Master Ecosystem integration!**
+
+*Last verified: [VERIFICATION-TIMESTAMP]*
+*Next review: [REVIEW-DATE]*
