@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obai Sukar Website</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1d4ed8;
+            --accent: #60a5fa;
+            --dark: #1e3a5f;
+            --text: #f5f5f5;
+            --bg: #0a1628;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        .container { max-width: 950px; margin: 0 auto; }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .meta { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .badge {
+            background: var(--dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid var(--accent);
+        }
+        h2 {
+            color: var(--accent);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark);
+        }
+        h3 { color: #93c5fd; margin: 1.5rem 0 0.5rem; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: #0f172a;
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 0.9rem;
+        }
+        th, td {
+            padding: 0.6rem 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid var(--dark);
+        }
+        th { background: var(--dark); color: var(--accent); }
+        code {
+            background: var(--dark);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            color: var(--accent);
+            font-size: 0.85rem;
+        }
+        ul { margin-left: 1.5rem; margin-bottom: 1rem; }
+        li { margin: 0.4rem 0; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--dark);
+            text-align: center;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Obai Sukar Website</h1>
+        <div class="meta">
+            <span class="badge">Web-Development</span>
+            <span class="badge">Active</span>
+            <span class="badge">High Priority</span>
+        </div>
+        <p>Personal portfolio and professional website featuring artistic resume designs, control panel for content management, and multiple page variants.</p>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Professional portfolio display</li>
+            <li>Artistic resume presentations</li>
+            <li>Control panel for site management</li>
+            <li>Media coverage and gallery pages</li>
+            <li>Responsive design across devices</li>
+            <li>PHP backend for dynamic content</li>
+        </ul>
+
+        <h2>Main Pages</h2>
+
+        <h3>Core Website</h3>
+        <table>
+            <tr><th>File</th><th>Description</th></tr>
+            <tr><td><code>index.html</code></td><td>Main website homepage (187KB)</td></tr>
+            <tr><td><code>Artistic_Resume.html</code></td><td>Creative resume design</td></tr>
+            <tr><td><code>portfolio.html</code></td><td>Portfolio showcase</td></tr>
+            <tr><td><code>landing.html</code></td><td>Landing page variant</td></tr>
+        </table>
+
+        <h3>Control Panel</h3>
+        <table>
+            <tr><th>File</th><th>Description</th></tr>
+            <tr><td><code>cp.html</code></td><td>Control panel interface (HTML)</td></tr>
+            <tr><td><code>cp.php</code></td><td>Control panel with PHP backend</td></tr>
+            <tr><td><code>cp-simple.php</code></td><td>Simplified control panel</td></tr>
+        </table>
+
+        <h3>Media & Gallery</h3>
+        <table>
+            <tr><th>File</th><th>Description</th></tr>
+            <tr><td><code>media.html</code></td><td>Main media page</td></tr>
+            <tr><td><code>media-coverage.html</code></td><td>Media coverage showcase</td></tr>
+            <tr><td><code>media-gallery.html</code></td><td>Full media gallery</td></tr>
+        </table>
+
+        <h3>Page Variants</h3>
+        <table>
+            <tr><th>File</th><th>Description</th></tr>
+            <tr><td><code>obai_sukar_website_v3.0.html</code></td><td>Version 3.0</td></tr>
+            <tr><td><code>obai_sukar_website_final.html</code></td><td>Final design</td></tr>
+            <tr><td><code>obai_sukar_website_enhanced.html</code></td><td>Enhanced version</td></tr>
+            <tr><td><code>obai_sukar_website_english.html</code></td><td>English variant</td></tr>
+        </table>
+
+        <h2>Asset Folders</h2>
+        <table>
+            <tr><th>Folder</th><th>Contents</th></tr>
+            <tr><td><code>BG/</code></td><td>Background images and patterns</td></tr>
+            <tr><td><code>Buttons_/</code></td><td>Button graphics and states</td></tr>
+            <tr><td><code>Fonts/</code></td><td>Custom typography files</td></tr>
+            <tr><td><code>Icons/</code></td><td>Icon sets and graphics</td></tr>
+            <tr><td><code>Logos/</code></td><td>Logo variations</td></tr>
+            <tr><td><code>Testimonials/</code></td><td>Client testimonials</td></tr>
+            <tr><td><code>assets/</code></td><td>General media assets</td></tr>
+            <tr><td><code>api/</code></td><td>Backend API endpoints</td></tr>
+        </table>
+
+        <h2>Tech Stack</h2>
+        <ul>
+            <li><strong>HTML5:</strong> Page structure</li>
+            <li><strong>CSS3:</strong> Styling and animations</li>
+            <li><strong>JavaScript:</strong> Interactivity</li>
+            <li><strong>PHP:</strong> Backend and control panel</li>
+        </ul>
+
+        <h2>Quick Start</h2>
+        <ol style="margin-left: 1.5rem;">
+            <li>View Website: Open <code>index.html</code> in a browser</li>
+            <li>Control Panel: Access <code>cp.html</code> or <code>cp.php</code></li>
+            <li>View Portfolio: Open <code>portfolio.html</code></li>
+            <li>View Resume: Open <code>Artistic_Resume.html</code></li>
+        </ol>
+
+        <h2>GitHub Repository</h2>
+        <p><a href="https://github.com/thewahish/obaisukar-website">https://github.com/thewahish/obaisukar-website</a></p>
+
+        <footer>
+            <p><strong>Developer:</strong> Obai Sukar</p>
+            <p>Last Updated: December 27, 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
