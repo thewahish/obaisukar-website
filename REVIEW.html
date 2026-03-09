@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obaisukar.com Redesign - Review & Decisions</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f5f5f5; color: #292663; line-height: 1.6; padding: 2rem; max-width: 900px; margin: 0 auto; }
+        h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #666; margin-bottom: 2rem; }
+        .section { background: white; border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .section h2 { font-size: 1.3rem; color: #292663; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #00AEEF; }
+        .decision { margin: 1.5rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #00AEEF; }
+        .decision h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+        .decision p { font-size: 0.9rem; color: #555; margin-bottom: 0.75rem; }
+        label { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.5rem 0; cursor: pointer; font-size: 0.95rem; }
+        label:hover { background: rgba(0,174,239,0.05); border-radius: 6px; padding-left: 0.5rem; }
+        input[type="checkbox"], input[type="radio"] { margin-top: 0.25rem; accent-color: #00AEEF; width: 18px; height: 18px; flex-shrink: 0; }
+        .status { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+        .status-done { background: #d4edda; color: #155724; }
+        .status-review { background: #fff3cd; color: #856404; }
+        .status-todo { background: #f8d7da; color: #721c24; }
+        a { color: #00AEEF; }
+        .note { background: #e8f4fd; padding: 1rem; border-radius: 8px; font-size: 0.9rem; margin: 1rem 0; }
+        .links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+        .links a { display: inline-block; padding: 0.5rem 1rem; background: #292663; color: white; text-decoration: none; border-radius: 6px; font-size: 0.85rem; transition: background 0.2s; }
+        .links a:hover { background: #00AEEF; }
+        textarea { width: 100%; min-height: 80px; padding: 0.75rem; border: 2px solid #e5e5e5; border-radius: 8px; font-family: inherit; font-size: 0.9rem; resize: vertical; }
+        textarea:focus { outline: none; border-color: #00AEEF; }
+        .final { text-align: center; padding: 2rem; }
+        .final button { padding: 1rem 3rem; background: #292663; color: white; border: none; border-radius: 50px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: all 0.3s; }
+        .final button:hover { background: #00AEEF; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+
+<h1>obaisukar.com Redesign -- Review Sheet</h1>
+<p class="subtitle">Open index.html in browser, then go through each section below. Check what you approve, flag what needs changes.</p>
+
+<div class="links">
+    <a href="index.html" target="_blank">Open Redesigned Site</a>
+    <a href="_backup_20260306/index.html.bak" target="_blank">Open Old Version (Backup)</a>
+    <a href="portfolio.html" target="_blank">Portfolio Page</a>
+    <a href="PROGRESS.md" target="_blank">Progress Tracker</a>
+</div>
+
+<!-- ========== HERO ========== -->
+<div class="section" style="margin-top: 2rem;">
+    <h2>1. Hero Section <span class="status status-review">NEEDS REVIEW</span></h2>
+
+    <div class="decision">
+        <h3>Hero Headline</h3>
+        <p>Current: "I build enterprise IT systems that don't go down. I design sound for award-winning films."</p>
+        <label><input type="radio" name="hero-headline" value="current" checked> Keep current (conversational, punchy)</label>
+        <label><input type="radio" name="hero-headline" value="alt1"> "Enterprise IT Infrastructure. Award-Winning Sound Design. 25+ Years of Both." (more formal)</label>
+        <label><input type="radio" name="hero-headline" value="alt2"> "Two Careers. One Standard. Zero Compromise." (shorter/abstract)</label>
+        <label><input type="radio" name="hero-headline" value="custom"> Custom (write below)</label>
+        <textarea placeholder="Your custom headline..."></textarea>
+    </div>
+
+    <div class="decision">
+        <h3>Two-World Cards</h3>
+        <p>Tech card shows: 25+ Years, 18+ Facilities, 99.8% Uptime. Creative card shows: Academy Award, 739K+ Subs, 310M+ Views.</p>
+        <label><input type="checkbox" checked> Approve Tech card stats</label>
+        <label><input type="checkbox" checked> Approve Creative card stats</label>
+        <label><input type="checkbox"> Add images/icons to cards (currently using existing icon PNGs)</label>
+        <label><input type="checkbox"> Want side-by-side video embed in hero instead</label>
+    </div>
+</div>
+
+<!-- ========== WHO I WORK WITH ========== -->
+<div class="section">
+    <h2>2. "Who I Work With" Section <span class="status status-review">NEEDS REVIEW</span></h2>
+
+    <div class="decision">
+        <h3>Client Categories</h3>
+        <p>Current 6 categories: Healthcare Orgs, Enterprises/SMBs, Film/TV, Animation Studios, Media Companies, Artists/Musicians</p>
+        <label><input type="checkbox" checked> Keep all 6</label>
+        <label><input type="checkbox"> Add "Government / Public Sector"</label>
+        <label><input type="checkbox"> Add "Education / Universities"</label>
+        <label><input type="checkbox"> Remove one (specify below)</label>
+        <textarea placeholder="Changes to client categories..."></textarea>
+    </div>
+</div>
+
+<!-- ========== TECH SECTION ========== -->
+<div class="section">
+    <h2>3. Technology Section <span class="status status-review">NEEDS REVIEW</span></h2>
+
+    <div class="decision">
+        <h3>Highlight Banner Stats</h3>
+        <p>18+ Healthcare Facilities | 99.8% Uptime | Zero Security Incidents</p>
+        <label><input type="checkbox" checked> Approve these stats (are they current and accurate?)</label>
+        <label><input type="checkbox"> Update numbers (write correct ones below)</label>
+        <textarea placeholder="Updated stats if needed..."></textarea>
+    </div>
+
+    <div class="decision">
+        <h3>AI Orchestration Card</h3>
+        <p>Included "14-agent system" reference. This is based on master-system data. Should this be public?</p>
+        <label><input type="radio" name="ai-card" value="keep" checked> Keep AI card (it's a differentiator)</label>
+        <label><input type="radio" name="ai-card" value="simplify"> Simplify -- remove "14-agent" detail, keep general AI consulting</label>
+        <label><input type="radio" name="ai-card" value="remove"> Remove AI card entirely</label>
+    </div>
+
+    <div class="decision">
+        <h3>Scarcity Note</h3>
+        <p>Current: "Currently booking Q2 2026 engagements"</p>
+        <label><input type="radio" name="scarcity" value="keep" checked> Keep it (creates urgency)</label>
+        <label><input type="radio" name="scarcity" value="update"> Update to different timeline</label>
+        <label><input type="radio" name="scarcity" value="remove"> Remove (feels too salesy)</label>
+        <textarea placeholder="Updated scarcity text..."></textarea>
+    </div>
+</div>
+
+<!-- ========== CREATIVE SECTION ========== -->
+<div class="section">
+    <h2>4. Creative Section <span class="status status-review">NEEDS REVIEW</span></h2>
+
+    <div class="decision">
+        <h3>Showcase Cards Order</h3>
+        <p>Current order: Karazah Channel, Cloud Kumo (Academy Award), Radio Al-Kul</p>
+        <label><input type="radio" name="showcase-order" value="current" checked> Keep current (biggest channel first)</label>
+        <label><input type="radio" name="showcase-order" value="award-first"> Lead with Academy Award (Cloud Kumo first)</label>
+        <label><input type="radio" name="showcase-order" value="humanitarian"> Lead with humanitarian story (Radio Al-Kul first)</label>
+    </div>
+
+    <div class="decision">
+        <h3>Service Grouping</h3>
+        <p>Currently grouped as: Production Services | Direction & Localization | Infrastructure & Engineering</p>
+        <label><input type="checkbox" checked> Approve grouping</label>
+        <label><input type="checkbox"> Want flat list instead (no subheadings)</label>
+        <label><input type="checkbox"> Different grouping (describe below)</label>
+        <textarea placeholder="Alternative grouping..."></textarea>
+    </div>
+
+    <div class="decision">
+        <h3>SS Media Productions</h3>
+        <p>Currently mentioned in the bio/story but not as a standalone showcase card. Should it be?</p>
+        <label><input type="radio" name="ss-media" value="story-only" checked> Keep in story only (cleaner)</label>
+        <label><input type="radio" name="ss-media" value="add-card"> Add as 4th showcase card</label>
+    </div>
+</div>
+
+<!-- ========== STORY ========== -->
+<div class="section">
+    <h2>5. Story / Bio Section <span class="status status-review">NEEDS REVIEW</span></h2>
+
+    <div class="decision">
+        <h3>Narrative Style</h3>
+        <p>Changed from 6 resume cards to a narrative story format. Covers: childhood > Spacetoon > war radio > Michigan > today.</p>
+        <label><input type="radio" name="story-style" value="narrative" checked> Keep narrative (converts better, more human)</label>
+        <label><input type="radio" name="story-style" value="hybrid"> Hybrid -- narrative intro + timeline below</label>
+        <label><input type="radio" name="story-style" value="cards"> Revert to cards (old style)</label>
+    </div>
+
+    <div class="decision">
+        <h3>Story Tone Check</h3>
+        <p>Read through the 6 paragraphs. Any facts wrong? Tone too casual? Too serious?</p>
+        <label><input type="checkbox"> Story content approved as-is</label>
+        <label><input type="checkbox"> Needs factual corrections (note below)</label>
+        <label><input type="checkbox"> Tone adjustment needed</label>
+        <textarea placeholder="Story corrections or tone notes..."></textarea>
+    </div>
+</div>
+
+<!-- ========== PRESS ========== -->
+<div class="section">
+    <h2>6. Press Section <span class="status status-done">GOOD</span></h2>
+
+    <div class="decision">
+        <h3>Top-Tier Selection</h3>
+        <p>Always visible: NPR, Washington Post, Al Jazeera, BBC | Yahoo Finance, Business Insider, AP News</p>
+        <label><input type="checkbox" checked> Approve top-tier selection</label>
+        <label><input type="checkbox"> Swap one outlet (specify below)</label>
+        <textarea placeholder="Press changes..."></textarea>
+    </div>
+</div>
+
+<!-- ========== CONTACT ========== -->
+<div class="section">
+    <h2>7. Contact Form <span class="status status-done">GOOD</span></h2>
+
+    <div class="decision">
+        <h3>Form Fields</h3>
+        <p>Budget field REMOVED. Replaced with "Project Timeline" dropdown. Service dropdown now grouped by Tech and Creative.</p>
+        <label><input type="checkbox" checked> Approve removal of budget field</label>
+        <label><input type="checkbox" checked> Approve timeline dropdown</label>
+        <label><input type="checkbox" checked> Approve grouped service dropdown</label>
+    </div>
+</div>
+
+<!-- ========== DESIGN ========== -->
+<div class="section">
+    <h2>8. Design & Aesthetics <span class="status status-review">NEEDS REVIEW</span></h2>
+
+    <div class="decision">
+        <h3>Color Scheme</h3>
+        <p>Using existing brand colors: Deep Indigo #292663, Sky Blue #00AEEF, Orange #FBB04C accent.</p>
+        <label><input type="checkbox" checked> Colors look good</label>
+        <label><input type="checkbox"> Want darker overall (dark theme)</label>
+        <label><input type="checkbox"> Want more color vibrancy</label>
+    </div>
+
+    <div class="decision">
+        <h3>Background</h3>
+        <p>Kept the existing BG/Web/Obai-website_BG_2.png as hero background. White below fold.</p>
+        <label><input type="radio" name="bg" value="current" checked> Keep current (background image hero, white below)</label>
+        <label><input type="radio" name="bg" value="dark"> Dark theme throughout (like techtown)</label>
+        <label><input type="radio" name="bg" value="gradient"> Subtle gradient throughout instead of white</label>
+    </div>
+
+    <div class="decision">
+        <h3>TechTown Animations</h3>
+        <p>No orbit/particle animations were added yet. These are optional enhancements.</p>
+        <label><input type="checkbox"> Want subtle particle/orbit animation in hero</label>
+        <label><input type="checkbox"> Want smooth scroll section transitions</label>
+        <label><input type="checkbox"> Skip animations for now (ship fast, add later)</label>
+    </div>
+</div>
+
+<!-- ========== TECHNICAL ========== -->
+<div class="section">
+    <h2>9. Technical / SEO <span class="status status-done">GOOD</span></h2>
+
+    <div class="note">
+        Created: robots.txt, sitemap.xml. Updated meta tags, OG tags, structured data, FAQ schema. All images have alt text. Lazy loading enabled. No console errors expected.
+    </div>
+
+    <div class="decision">
+        <h3>Arabic Language Support</h3>
+        <p>The old site had a hidden language toggle. Not re-implemented in redesign.</p>
+        <label><input type="radio" name="arabic" value="later" checked> Add Arabic later (not blocking launch)</label>
+        <label><input type="radio" name="arabic" value="now"> Need Arabic before launch</label>
+    </div>
+</div>
+
+<!-- ========== DEPLOYMENT ========== -->
+<div class="section">
+    <h2>10. Deployment Checklist <span class="status status-todo">TODO</span></h2>
+
+    <div class="decision">
+        <h3>Pre-Deploy Steps</h3>
+        <label><input type="checkbox"> Reviewed index.html in browser locally</label>
+        <label><input type="checkbox"> Tested on mobile (or Chrome DevTools mobile view)</label>
+        <label><input type="checkbox"> SSH backup command run on server</label>
+        <label><input type="checkbox"> Files uploaded via FTP</label>
+        <label><input type="checkbox"> Live site tested</label>
+        <label><input type="checkbox"> Facebook pixel verified in Events Manager</label>
+    </div>
+
+    <div class="note">
+        SSH backup command: <code>cp -r /var/www/obaisukar.com/public_html/ /var/www/obaisukar.com/backup_$(date +%Y%m%d_%H%M%S)/</code><br><br>
+        Files to upload: <strong>index.html</strong>, <strong>robots.txt</strong>, <strong>sitemap.xml</strong><br>
+        All other assets (images, fonts, icons) remain unchanged.
+    </div>
+</div>
+
+<!-- ========== GENERAL NOTES ========== -->
+<div class="section">
+    <h2>General Notes / Additional Feedback</h2>
+    <textarea style="min-height: 150px;" placeholder="Anything else you want changed, added, or removed..."></textarea>
+</div>
+
+<div class="final">
+    <p style="color: #666; margin-bottom: 1rem;">When you're done reviewing, just tell me what to change. Reference section numbers.</p>
+    <button onclick="alert('Copy your selections and paste them to Claude Code. I will implement all changes.')">Done Reviewing</button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /cp.html
+Disallow: /cp.php
+Disallow: /cp-simple.php
+Disallow: /deploy.php
+Disallow: /install.php
+Disallow: /_old-versions/
+Disallow: /_backup_*/
+Disallow: /comfy/
+Disallow: /tools/
+
+Sitemap: https://obaisukar.com/sitemap.xml
